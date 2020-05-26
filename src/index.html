@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приложение PINK</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo logo">
+        <img class="logo__icon" src="" alt="Логотип Pink">
+      </a>
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">Открыть меню</button>
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Html academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="section hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__inner-title">
+            <h1 class="hero__title">Взгляните на жизнь иначе!</h1>
+          </div>
+          <div class="hero__inner-application">
+            <a class="hero__button button" href="#">Скачать приложение</a>
+            <ul class="hero__list score-list">
+              <li class="score-list__item">
+                <a class="scrore-list__link" href="https://www.apple.com/ru/ios/app-store/">
+                  <img class="score-list__image" src="./images/icons/logo-apple.svg" width="47"
+                    height="56" alt="Логотип Iphone">
+                </a>
+              </li>
+              <li class="score-list__item">
+                <a class="scrore-list__link" href="https://play.google.com/store?hl=ru">
+                  <img class="score-list__image" src="./images/icons/logo-android.svg"
+                    width="43" height="47" alt="Логотип Android">
+                </a>
+              </li>
+              <li class="score-list__item">
+                <a class="scrore-list__link"
+                  href="https://www.microsoft.com/store/apps/windows-phone">
+                  <img class="score-list__image" src="./images/icons/logo-microsoft.svg"
+                    width="44" height="41" alt="Логотип Windows">
+                </a>
+              </li>
+            </ul>
+            <p class="hero__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X,
+              Windows
+              8
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section advantages">
+      <div class="container">
+        <h2 class="advantages__title">Устали от серости мегаполиса?</h2>
+        <h3 class="advantages__title">Нам есть, что вам предложить!</h3>
+
+        <ul class="advantages-list">
+          <li class="advantages-list__item">
+            <!--Либо вставить через CSS либо картинкой-->
+            <img class="advantages-list__image" src="" alt="">
+            <h4 class="advantages-list__title">Поднимает настроение</h4>
+            <p class="advantages-list__description">Приложение позволит вам победить осеннюю
+              хандру и депрессию
+              буквально в несколько кликов!</p>
+          </li>
+          <li class="advantages-list__item">
+            <!--Либо вставить через CSS либо картинкой-->
+            <img class="advantages-list__image" src="" alt="">
+            <h4 class="advantages-list__title">Меняет мир вокруг</h4>
+            <p class="advantages-list__description">Сделайте снимок и украсьте его смайликом
+              или
+              текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="advantages-list__item">
+            <!--Либо вставить через CSS либо картинкой-->
+            <img class="advantages-list__image" src="" alt="">
+            <h4 class="advantages-list__title">Заводит новых друзей</h4>
+            <p class="advantages-list__description">Ставьте лайки, комментируйте, делитесь
+              фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section study">
+      <div class="container">
+        <!--Через svg,с добавлением псевдоэлементов-->
+        <img class="study__image" src="" alt="">
+        <ul class="study__list fact-list">
+          <li class="fact-list__item">
+            <h2 class="fact-list__title">Эффект на 24 часа</h2>
+          </li>
+          <li class="fact-list__item">
+            <p class="fact-list__text">Британские ученые провели исследования и доказали,
+              что положительный эффект от использования приложения длится целые сутки!</p>
+          </li>
+          <li class="fact-list__item">
+            <a class="fact-list__link" href="">Узнать больше об исследовании!</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section rewievs">
+      <div class="container slider">
+        <ul class="rewievs__list slider__list">
+          <li class="rewievs__item slider__item">
+            <p class="rewievs__text">«Это приложение перевернуло
+              мой мир и позволило по-новому взглянуть на
+              привычные серые вещи! А еще я познакомился
+              со своей будущей женой в
+              комментариях к выложенной
+              фотографии!»</p>
+            <div class="rewievs__name">Николай Петров</div>
+            <div class="rewievs__about">25 лет, водитель трамвая</div>
+          </li>
+          <li class="rewievs__item slider__item">
+            <p class="rewievs__text">«Это приложение перевернуло
+              мой мир и позволило по-новому взглянуть на
+              привычные серые вещи! А еще я познакомился
+              со своей будущей женой в
+              комментариях к выложенной
+              фотографии!»</p>
+            <div class="rewievs__name">Николай Петров</div>
+            <div class="rewievs__about">25 лет, водитель трамвая</div>
+          </li>
+          <li class="rewievs__item slider__item">
+            <p class="rewievs__text">«Это приложение перевернуло
+              мой мир и позволило по-новому взглянуть на
+              привычные серые вещи! А еще я познакомился
+              со своей будущей женой в
+              комментариях к выложенной
+              фотографии!»</p>
+            <div class="rewievs__name">Николай Петров</div>
+            <div class="rewievs__about">25 лет, водитель трамвая</div>
+          </li>
+        </ul>
+        <button class="rewievs__prev" type="button">Предыдущий отзыв</button>
+        <button class="rewievs__next" type="button">Следующий отзыв</button>
+        <ul class="rewievs__toggles slider__toggles">
+          <li class="slider__toggle">
+            <button class="slider__button" href="#">1</button>
+          </li>
+          <li class="slider__toggle">
+            <button class="slider__button" href="#">2</button>
+          </li>
+          <li class="slider__toggle">
+            <button class="slider__button" href="#">3</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section tarrifs">
+      <div class="container">
+        <table class="price-table">
+          <tr class="price-table-row">
+            <th class="price-table__title price-table__title--hidden"></th>
+            <th class="price-table__title">
+              <span class="price-table__name">База</span>
+              <span class="price-table__cost">1,99 USD</span>
+            </th>
+            <th class="price-table__title">
+              <span class="price-table__name">Стандарт</span>
+              <span class="price-table__cost">3,99 USD</span>
+            </th>
+            <th class="price-table__title">
+              <span class="price-table__name">Анлим</span>
+              <span class="price-table__cost">9,99 USD</span>
+            </th>
+          </tr>
+          <tr class="price-table__row">
+            <td class="price-table__cell price-table__cell--hidden">
+              <span class="option">Розовый фильтр</span>
+            </td>
+            <td class="price-table__cell price-table__cell--available">
+              <span class="option option--hidden">Розовый фильтр</span>
+            </td>
+            <td class="price-table__cell price-table__cell--available">
+              <span class="option option--hidden">Розовый фильтр</span>
+            </td>
+            <td class="price-table__cell price-table__cell--available">
+              <span class="option option--hidden">Розовый фильтр</span>
+            </td>
+          </tr>
+
+          <tr class="price-table__row">
+            <td class="price-table__cell price-table__cell--hidden">
+              <span class="option">Смайлики</span>
+            </td>
+            <td class="price-table__cell price-table__cell--unavailable">
+              <span class="option option--hidden">Смайлики</span>
+            </td>
+            <td class="price-table__cell price-table__cell--available">
+              <span class="option option--hidden">Смайлики</span>
+            </td>
+            <td class="price-table__cell price-table__cell--available">
+              <span class="option option--hidden">Смайлики</span>
+            </td>
+          </tr>
+
+          <tr class="price-table__row">
+            <td class="price-table__cell price-table__cell--hidden">
+              <span class="option">Комментарии</span>
+            </td>
+            <td class="price-table__cell price-table__cell--unavailable">
+              <span class="option option--hidden">Комментарии</span>
+            </td>
+            <td class="price-table__cell price-table__cell--unavailable">
+              <span class="option option--hidden">Комментарии</span>
+            </td>
+            <td class="price-table__cell price-table__cell--available">
+              <span class="option option--hidden">Комментарии</span>
+            </td>
+          </tr>
+        </table>
+        <ul class="tarrifs__toggles slider__toggles">
+          <li class="slider__toggle">
+            <button class="slider__button" href="#">1</button>
+          </li>
+          <li class="slider__toggle">
+            <button class="slider__button" href="#">2</button>
+          </li>
+          <li class="slider__toggle">
+            <button class="slider__button" href="#">3</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contacts">
+      <div class="container">
+        <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+
+        <ul class="contacts feedback">
+          <li class="feedback__item">
+            <h3 class="feedback__title">Звоните:</h3>
+            <a class="feedback__info" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </li>
+          <li class="feedback__item">
+            <h3 class="feedback__title">Пишите:</h3>
+            <a class="feedback__info" href="malito:s.mysov@list.ru">s.mysov@list.ru</a>
+          </li>
+          <li class="feedback__item">
+            <h3 class="feedback__title">Приезжайте в гости:</h3>
+            <span class="feedback__info">ул. Куйбышева, 99</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section map"></section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="footer__logo logo" href="index.html">
+        <img class="logo__icon" src="#" alt="">
+      </a>
+      <ul class="footer__socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#"></a>
+        </li>
+      </ul>
+      <div class="footer__copyright copyright">
+        <span class="copyright__text">Разработано</span>
+        <img class="copyright__image" src="" alt="">
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
