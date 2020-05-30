@@ -30,6 +30,7 @@
   &__title-legend {
     margin-bottom: 40px;
     padding: 0 30px;
+    text-align: center;
 
     &--emotion {
       margin-bottom: 20px;
@@ -49,7 +50,7 @@
     &--centred {
       text-align: center;
     }
-    
+
     &--input {
       display: flex;
       flex-direction: column;
@@ -138,31 +139,52 @@
       border-radius: 1px;
       border-left: 4px solid $pink;
       border-bottom: 4px solid $pink;
-      transform: rotate(-45deg);
+      transform: rotate(-45deg) scale(4);
       opacity: 0;
       transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
   }
 
   &__checkbox {
+    position: absolute;
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
     clip: rect(0 0 0 0);
+    overflow: hidden;
 
     &:checked+.form__title-checkbox:after {
       opacity: 1;
+      transform: rotate(-45deg) scale(1);
+    }
+
+    &:focus+.form__title-checkbox::before {
+      border-color: $pinkHover;
     }
   }
 
   .form__radio {
+    position: absolute;
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
     clip: rect(0 0 0 0);
+    overflow: hidden;
 
     &:checked+.form__title-radio:after {
       opacity: 1;
+    }
+
+    &:focus+.form__title-radio::before {
+      border-color: $pinkHover;
     }
   }
 
