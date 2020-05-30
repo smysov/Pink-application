@@ -1,0 +1,25 @@
+.score-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 27px;
+}
+
+.score-list__image {
+
+  &--apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  &--android {
+    width: 43px;
+    height: 47px;
+  }
+
+  &--microsoft {
+    width: 44px;
+    height: 41px;
+  }
+}

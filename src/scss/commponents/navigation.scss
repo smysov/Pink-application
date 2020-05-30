@@ -1,0 +1,39 @@
+.site-list {
+  display: none;
+
+  &--active {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    right: 0;
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .site-list__item {
+      width: 100%;
+      @include font("Open Sans", 18px, 700, normal);
+      text-transform: uppercase;
+      border-top: 1px solid #495562;
+      border-bottom: 1px solid #000;
+      text-align: center;
+    }
+
+    .site-list__link {
+      padding: 21px 0;
+      color: #fff;
+      cursor: pointer;
+      transition: color .5s ease-in;
+
+      &:hover {
+        color: $pink;
+      }
+
+      &:active {
+        color: $pinkHover;
+      }
+    }
+  }
+}

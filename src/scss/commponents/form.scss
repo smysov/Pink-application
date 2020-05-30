@@ -1,0 +1,262 @@
+.form {
+
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__column {
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      padding: 40px 0;
+      margin-bottom: 40px;
+      background-color: #f2f2f2;
+    }
+  }
+
+  &__title,
+  &__title-legend {
+    @include font("Open Sans", 14px, 400, normal);
+    color: $pink;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    padding-left: 21px;
+    margin-bottom: 15px;
+  }
+
+  &__title-legend {
+    margin-bottom: 40px;
+    padding: 0 30px;
+
+    &--emotion {
+      margin-bottom: 20px;
+    }
+
+    &--contacts {
+      display: none;
+    }
+  }
+}
+
+//Инпуты
+.form {
+
+  &__line {
+
+    &--centred {
+      text-align: center;
+    }
+    
+    &--input {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--button {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  }
+
+
+  &__input {
+    padding: 20px;
+    margin-bottom: 25px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .2);
+    transition: .4s linear;
+
+    &:hover {
+      border-color: #000;
+    }
+
+    &:focus {
+      border-color: $pink;
+    }
+
+    &--patronymic,
+    &--email {
+      margin-bottom: 42px;
+    }
+
+    &::placeholder {
+      @include font("Open Sans", 18px, 400, normal);
+      color: #000;
+    }
+  }
+}
+
+//Легенды и филдсеты
+.form {
+
+  &__border {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+//Радио-кнопки и чекбоксы
+.form {
+
+  &__title-checkbox,
+  &__title-radio {
+    @include font("Open Sans", 18px, 400, normal);
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__title-checkbox {
+    padding-left: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -50%;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border: 2px solid rgba(0, 0, 0, .2);
+      transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 5px;
+      width: 15px;
+      height: 6px;
+      border-radius: 1px;
+      border-left: 4px solid $pink;
+      border-bottom: 4px solid $pink;
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+    }
+  }
+
+  &__checkbox {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    &:checked+.form__title-checkbox:after {
+      opacity: 1;
+    }
+  }
+
+  .form__radio {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    &:checked+.form__title-radio:after {
+      opacity: 1;
+    }
+  }
+
+  &__title-radio {
+    padding-left: 65px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 0, 0, .2);
+      transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      width: 14px;
+      height: 14px;
+      background-color: #d22856;
+      border-radius: 50%;
+      opacity: 0;
+      transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+    }
+  }
+}
+
+//Текстария
+.form {
+
+  &__comment {
+    padding: 23px 20px;
+    min-height: 200px;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: .4s linear;
+    margin-bottom: 48px;
+
+    &::placeholder {
+      @extend .form__input::placeholder;
+    }
+
+    &:hover {
+      border-color: #000;
+    }
+
+    &:focus {
+      border-color: $pink;
+    }
+  }
+}
+
+//Кнопка
+.form {
+
+  &__button {
+    @include font("Open Sans", 18px, 700, normal);
+    padding: 20px 47px;
+    color: #fff;
+    background-color: #2aab6d;
+    border: none;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+    text-align: center;
+
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      background-color: #1c9b5e;
+      color: rgba(255, 255, 255, .2)
+    }
+  }
+}
+
+//Примечание
+.form {
+
+  &__note {
+    @include font("Open Sans", 14px, 400, normal);
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+  }
+
+  &__necessarily {
+    color: $pink;
+  }
+}

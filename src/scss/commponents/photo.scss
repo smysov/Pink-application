@@ -1,0 +1,105 @@
+.photo {
+
+  &__image {
+
+    &--day {
+      position: relative;
+    }
+  }
+
+  &__picture {
+    vertical-align: middle;
+  }
+
+  &__text {
+    @include font("Open Sans", 14px, 400, normal);
+    line-height: 30px;
+    text-align: center;
+    padding: 52px 18px 0;
+    margin-bottom: 54px;
+  }
+
+  &__scale {
+    @include font("Open Sans", 12px, 700, normal);
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: $pink;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding: 22px 20px;
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    @include font("Open Sans", 14px, 700, normal);
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  &__time {
+    font-size: 12px;
+    font-weight: 300;
+    color: #283645;
+  }
+
+  &__comment {
+    @include font("Open Sans", 14px, 400, normal);
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+    order: 1;
+    padding-bottom: 22px;
+  }
+
+  &__quantity {
+    font-size: 12px;
+    order: 1;
+    text-transform: uppercase;
+    color: $pink;
+  }
+
+  &__amount {
+    margin-left: 5px;
+  }
+
+  &__like {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 14px;
+    height: 13px;
+    background-image: url(../../img/decor/icon-heart.svg);
+    background-repeat: no-repeat;
+    margin-right: 20px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__item {
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.added {
+  background-image: url(../../img/decor/icon-heart-added.svg);
+  background-repeat: round;
+}

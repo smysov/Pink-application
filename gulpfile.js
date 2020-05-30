@@ -50,9 +50,10 @@ task("copy:decor", () => {
     .pipe(reload({ stream: true }));
 });
 
+
 task("styles", () => {
   return (
-    src([...STYLE_LIBS, `${SRC_PATH}/scss/style.scss`])
+    src([...STYLE_LIBS, `${SRC_PATH}/scss/main.scss`])
       .pipe(gulpif(env === "dev", sourcemaps.init()))
       .pipe(sassGlob()) // лучше пеедавать только блоки, чтобы не перебить стили
       .pipe(concat("main.min.scss"))
@@ -75,7 +76,7 @@ task("styles", () => {
 });
 
 task("scripts", () => {
-  return src([...JS_LIBS, `${SRC_PATH}/scripts/*js`])
+  return src(`${SRC_PATH}/scripts/*js`)
     .pipe(gulpif(env === "dev", sourcemaps.init()))
     .pipe(concat("main.min.js", { newLine: ";" }))
     .pipe(gulpif(env === "prod", babel({ presets: ["@babel/env"] })))
@@ -91,7 +92,7 @@ task("icons", () => {
       svgo({
         plugins: [
           {
-            removeAttrs: { attrs: "(fill|data.*)" }
+            removeAttrs: { attrs: "(data.*)" }
           }
         ]
       })
@@ -105,7 +106,7 @@ task("icons", () => {
         }
       })
     )
-    .pipe(dest(`${DIST_PATH}/img/icon`));
+    .pipe(dest(`${DIST_PATH}/img/icons`));
 });
 
 task("server", () => {
@@ -131,7 +132,7 @@ task(
       "copy:html",
       "copy:pictures",
       "copy:decor",
-      "icons"
+      "icons",
       "styles",
       "scripts",
       "fonts"

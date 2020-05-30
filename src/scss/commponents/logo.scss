@@ -1,0 +1,26 @@
+.logo {
+  padding: 20px 0;
+}
+
+.logo__icon {
+  width: 74px;
+  height: 24px;
+  fill: #fff;
+  transition: .3s ease;
+  
+
+  &:hover {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: #fff;
+    opacity: 0.3;
+  }
+
+  &--footer {
+    width: 147px;
+    height: 40px;
+    fill: #000;
+  }
+}

@@ -1,0 +1,64 @@
+.publication {
+
+  &__text {
+    @extend .photo__text;
+    text-align: center;
+  }
+
+  &__inner {
+    background-color: #f2f2f2;
+  }
+
+  &__filters {
+    display: flex;
+  }
+
+  &__icon {
+    fill: $pink;
+    width: 45px;
+    height: 45px;
+  }
+
+  &__input {
+    width: 100%;
+  }
+}
+
+.publication__input--hidden {
+  display: none;
+}
+
+.button--send {
+  width: 100%;
+  color: $pink;
+  border-color: $pink;
+  transition: .5s linear;
+
+  &:hover {
+    background-color: $pink;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: $pink;
+    color: rgba(255, 255, 255, .3);
+  }
+}
+
+.button--reset {
+  width: 100%;
+  color: rgba(0, 0, 0, .1);
+  border-color: rgba(0, 0, 0, .1);
+  background-color: #fff;
+  transition: .5s linear;
+
+  &:hover {
+    color: rgba(0, 0, 0, .3);
+    border-color: rgba(0, 0, 0, .3);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .3);
+  }
+}

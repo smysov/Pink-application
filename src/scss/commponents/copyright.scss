@@ -1,0 +1,24 @@
+.copyright {
+  display: flex;
+  align-items: inherit;
+
+  &__text {
+    @include font("Open Sans", 14px, 400, normal);
+    margin-right: 15px;
+  }
+
+  &__logo {
+    fill: #d22856;
+    width: 35px;
+    height: 40px;
+    transition: .5s linear;
+
+    &:hover {
+      fill: #ff6d26;
+    }
+
+    &:active {
+      fill: #000;
+    }
+  }
+}

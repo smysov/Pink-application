@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  font-family: "OpenSans", "Arial", sans-serif;
+  background-color: #fff;
+}
+
+.main-wrapper {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 620px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.button {
+  @include font("Open Sans", 18px, 700, normal);
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 15px 35px 14px;
+  border-radius: 50px;
+  transition: $leaner;
+  outline: none;
+}
