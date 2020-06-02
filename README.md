@@ -2,6 +2,7 @@
 ![Главная страница](https://i.ibb.co/GpPg8Fc/screenshot.png "Главная страница")   
 
 ### Что бы развернуть у себя проект необходимо:
+
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
 
 _$ git clone git@github.com:smysov/Pink-application.git_
