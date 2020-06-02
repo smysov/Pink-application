@@ -186,80 +186,63 @@
 
       <section class="section tarrifs">
         <h2 class="visually-hidden">Наши тарифы</h2>
-        <div class="tarrifs__wrapper slider">
-          <div class="price-list slider__inner"></div>
-          <table class="price-table slider__slides slider__slides--table">
-            <tbody>
-              <tr class="price-table-row">
-                <th class="price-table__title price-table__title--hidden"></th>
-                <th class="price-table__title">
-                  <span class="price-table__name">База</span>
-                  <span class="price-table__cost">1,99 USD</span>
-                </th>
-                <th class="price-table__title">
-                  <span class="price-table__name">Стандарт</span>
-                  <span class="price-table__cost">3,99 USD</span>
-                </th>
-                <th class="price-table__title">
-                  <span class="price-table__name">Анлим</span>
-                  <span class="price-table__cost">9,99 USD</span>
-                </th>
-              </tr>
-              <tr class="price-table__row">
-                <td class="price-table__cell price-table__cell--hidden">
-                  <span class="option">Розовый фильтр</span>
-                </td>
-                <td class="price-table__cell price-table__cell--available">
-                  <span class="option option--hidden">Розовый фильтр</span>
-                </td>
-                <td class="price-table__cell price-table__cell--available">
-                  <span class="option option--hidden">Розовый фильтр</span>
-                </td>
-                <td class="price-table__cell price-table__cell--available">
-                  <span class="option option--hidden">Розовый фильтр</span>
-                </td>
-              </tr>
-
-              <tr class="price-table__row">
-                <td class="price-table__cell price-table__cell--hidden">
-                  <span class="option">Смайлики</span>
-                </td>
-                <td class="price-table__cell price-table__cell--unavailable">
-                  <span class="option option--hidden">Смайлики</span>
-                </td>
-                <td class="price-table__cell price-table__cell--available">
-                  <span class="option option--hidden">Смайлики</span>
-                </td>
-                <td class="price-table__cell price-table__cell--available">
-                  <span class="option option--hidden">Смайлики</span>
-                </td>
-              </tr>
-
-              <tr class="price-table__row">
-                <td class="price-table__cell price-table__cell--hidden">
-                  <span class="option">Комментарии</span>
-                </td>
-                <td class="price-table__cell price-table__cell--unavailable">
-                  <span class="option option--hidden">Комментарии</span>
-                </td>
-                <td class="price-table__cell price-table__cell--unavailable">
-                  <span class="option option--hidden">Комментарии</span>
-                </td>
-                <td class="price-table__cell price-table__cell--available">
-                  <span class="option option--hidden">Комментарии</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="tarrifs__toggles slider__toggles">
-            <li class="slider__toggle">
-              <button class="slider__button" type="button"></button>
+        <div class="container">
+          <ul class="price">
+            <li class="price__item price__item--hidden">
+              <div class="price__inner">
+                <div class="price__subtitle">Розовый фильтр</div>
+              </div>
+              <div class="price__inner">
+                <div class="price__subtitle">Смайлики</div>
+              </div>
+              <div class="price__inner">
+                <div class="price__subtitle">Комментарии</div>
+              </div>
             </li>
-            <li class="slider__toggle">
-              <button class="slider__button" type="button"></button>
+            <li class="price__item price__item--hidden">
+              <div class="price__inner  price__inner--head">
+                <div class="price__title">База</div>
+                <div class="price__cost">1,99 usd</div>
+              </div>
+              <div class="price__inner price__inner--available">
+                <div class="price__subtitle">Розовый фильтр</div>
+              </div>
+              <div class="price__inner price__inner--unavailable">
+                <div class="price__subtitle">Смайлики</div>
+              </div>
+              <div class="price__inner price__inner--unavailable">
+                <div class="price__subtitle">Комментарии</div>
+              </div>
             </li>
-            <li class="slider__toggle">
-              <button class="slider__button" type="button"></button>
+            <li class="price__item">
+              <div class="price__inner  price__inner--head">
+                <div class="price__title price__title--hit">стандарт</div>
+                <div class="price__cost">3,99 usd</div>
+              </div>
+              <div class="price__inner price__inner--available">
+                <div class="price__subtitle">Розовый фильтр</div>
+              </div>
+              <div class="price__inner price__inner--available">
+                <div class="price__subtitle">Смайлики</div>
+              </div>
+              <div class="price__inner price__inner--unavailable">
+                <div class="price__subtitle">Комментарии</div>
+              </div>
+            </li>
+            <li class="price__item price__item--hidden">
+              <div class="price__inner  price__inner--head">
+                <div class="price__title">анлим</div>
+                <div class="price__cost">9,99 usd</div>
+              </div>
+              <div class="price__inner price__inner--available">
+                <div class="price__subtitle">Розовый фильтр</div>
+              </div>
+              <div class="price__inner price__inner--available">
+                <div class="price__subtitle">Смайлики</div>
+              </div>
+              <div class="price__inner price__inner--available">
+                <div class="price__subtitle">Комментарии</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -326,9 +309,9 @@
           </ul>
           <div class="footer__copyright copyright">
             <span class="copyright__text">Разработано</span>
-            <a class="copyright__link" href="https://github.com/smysov">
+            <a class="copyright__link" href="https://htmlacademy.ru/study" target="_blank">
               <svg class="copyright__logo">
-                <use xlink:href="../../img/icons/sprite.svg#github"></use>
+                <use xlink:href="../../img/icons/sprite.svg#logo-htmlacademy"></use>
               </svg>
             </a>
           </div>

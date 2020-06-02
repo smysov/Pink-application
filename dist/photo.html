@@ -22,23 +22,23 @@
             <span class="hamburger-menu__icon hamburger-menu__icon--burger"></span>
           </button>
         </div>
-        <nav class="main-navigation">
-          <ul class="main-navigation__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="photo.html">Фотографии</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Html academy</a>
-            </li>
-          </ul>
-        </nav>
       </div>
+      <nav class="main-navigation">
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/study">Html academy</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main">
@@ -109,8 +109,8 @@
                   сегодня в руки к нам попал.
                 </p>
                 <div class="photo__likes">
-                  <div class="photo__quantity">нравится:<span
-                      class="photo__amount">356</span></div>
+                  <div class="photo__quantity">нравится:<span class="photo__amount">356</span>
+                  </div>
                   <button class="photo__like" type="button">
                   </button>
                 </div>
@@ -172,8 +172,8 @@
                 <p class="photo__comment">Самая кубанская в мире!
                 </p>
                 <div class="photo__likes">
-                  <div class="photo__quantity">нравится:<span
-                      class="photo__amount">4</span></div>
+                  <div class="photo__quantity">нравится:<span class="photo__amount">4</span>
+                  </div>
                   <button class="photo__like" type="button">
                   </button>
                 </div>
@@ -191,8 +191,8 @@
                 <p class="photo__comment">Где снег-то?
                 </p>
                 <div class="photo__likes">
-                  <div class="photo__quantity">нравится:<span
-                      class="photo__amount">150</span></div>
+                  <div class="photo__quantity">нравится:<span class="photo__amount">150</span>
+                  </div>
                   <button class="photo__like" type="button">
                   </button>
                 </div>
@@ -210,8 +210,8 @@
                 <p class="photo__comment">Всем GM и взаимные лайки!
                 </p>
                 <div class="photo__likes">
-                  <div class="photo__quantity">нравится:<span
-                      class="photo__amount">2560</span></div>
+                  <div class="photo__quantity">нравится:<span class="photo__amount">2560</span>
+                  </div>
                   <button class="photo__like" type="button">
                   </button>
                 </div>
@@ -237,36 +237,47 @@
             <form class="publication__send" action="#" method="get">
               <div class="publication__functions">
                 <div class="publication__filters">
-                  <div class="publication__filter">
-                    <svg class="publication__icon">
-                      <use xlink:href="../../img/icons/sprite.svg#icon-editor-crop"></use>
-                    </svg>
-                    <input class="publication__input" type="range" min="0" max="100" step="1"
-                      value="30">
+                  <div class="publication__icons">
+                    <label for="crop" class="publication__title">
+                      <svg class="publication__icon">
+                        <use xlink:href="../../img/icons/sprite.svg#icon-editor-crop"></use>
+                      </svg>
+                    </label>
+                    <label for="fill" class="publication__title">
+                      <svg class="publication__icon">
+                        <use xlink:href="../../img/icons/sprite.svg#icon-editor-fill"></use>
+                      </svg>
+                    </label>
+                    <label for="contrast" class="publication__title">
+                      <svg class="publication__icon">
+                        <use xlink:href="../../img/icons/sprite.svg#icon-editor-contrast">
+                        </use>
+                      </svg>
+                    </label>
                   </div>
                   <div class="publication__filter">
-                    <svg class="publication__icon">
-                      <use xlink:href="../../img/icons/sprite.svg#icon-editor-contrast"></use>
-                    </svg>
-                    <input class="publication__input publication__input--hidden" type="range"
-                      min="0" max="100" step="1" value="80">
+                    <div class="publication__inner-filter">
+                      <input class="publication__input" id="crop" type="range" min="0"
+                        max="100" step="1" value="30">
+                    </div>
+                    <div class="publication__inner-filter publication__inner-filter--hidden">
+                      <input class="publication__input" id="fill" type="range" min="0"
+                        max="100" step="1" value="80">
+                    </div>
+                    <div class="publication__inner-filter publication__inner-filter--hidden">
+                      <input class="publication__input" id="contrast" type="range" min="0" max="100" step="1"
+                        value="60">
+                      <div class="publication__filter"></div>
+                    </div>
                   </div>
-                  <div class="publication__filter">
-                    <svg class="publication__icon">
-                      <use xlink:href="../../img/icons/sprite.svg#icon-editor-fill"></use>
-                    </svg>
-                    <input class="publication__input publication__input--hidden" type="range"
-                      min="0" max="100" step="1" value="60">
-                  </div>
-                </div>
 
-                <div class="publication__buttons">
-                  <button class="publication__send button button--send"
-                    type="submit">Запостить</button>
-                  <button class="publication__reset button button--reset"
-                    type="reset">Отмена</button>
+                  <div class="publication__buttons">
+                    <button class="publication__send button button--send"
+                      type="submit">Запостить</button>
+                    <button class="publication__reset button button--reset"
+                      type="reset">Отмена</button>
+                  </div>
                 </div>
-              </div>
             </form>
 
           </div>
@@ -308,9 +319,9 @@
           </ul>
           <div class="footer__copyright copyright">
             <span class="copyright__text">Разработано</span>
-            <a class="copyright__link" href="https://github.com/smysov">
+            <a class="copyright__link" href="https://htmlacademy.ru/study" target="_blank">
               <svg class="copyright__logo">
-                <use xlink:href="../../img/icons/sprite.svg#github"></use>
+                <use xlink:href="../../img/icons/sprite.svg#logo-htmlacademy"></use>
               </svg>
             </a>
           </div>

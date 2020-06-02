@@ -6,26 +6,48 @@
   }
 
   &__inner {
+    padding-top: 20px;
+    padding-bottom: 40px;
     background-color: #f2f2f2;
+  }
+
+  &__photo {
+    margin-bottom: 42px;
   }
 
   &__filters {
     display: flex;
+    flex-direction: column;
+  }
+
+  &__inner-filter {
+    border-bottom: 1px solid #dddfe0;
+    padding-bottom: 28px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 38px;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
   }
 
   &__icon {
     fill: $pink;
     width: 45px;
     height: 45px;
-  }
 
-  &__input {
-    width: 100%;
+    &:hover {
+      fill: $pinkHover;
+    }
   }
-}
-
-.publication__input--hidden {
-  display: none;
 }
 
 .button--send {
@@ -33,6 +55,7 @@
   color: $pink;
   border-color: $pink;
   transition: .5s linear;
+  margin-bottom: 12px;
 
   &:hover {
     background-color: $pink;
@@ -60,5 +83,53 @@
   &:active {
     background-color: rgba(0, 0, 0, .3);
     color: rgba(255, 255, 255, .3);
+  }
+}
+
+// Инпут Рандж
+
+.publication__input {
+  width: 100%;
+  appearance: none;
+  height: 2px;
+  background-color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #fff;
+    height: 14px;
+    width: 14px;
+    border: 3px solid $pink;
+    border-radius: 50%;
+
+    &:active {
+      background-color: $pink;
+    }
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    appearance: none;
+    height: 2px;
+    background-color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    background-color: #fff;
+    height: 14px;
+    width: 14px;
+    border: 3px solid $pink;
+    border-radius: 50%;
+
+    &:active {
+      background-color: $pink;
+    }
   }
 }

@@ -8,17 +8,17 @@
   }
 
   &__logo {
-    fill: #000;
+    fill: $pink;
     width: 35px;
     height: 40px;
     transition: .5s linear;
 
     &:hover {
-      fill: $pinkHover;
+      fill: #000;
     }
     
     &:active {
-      fill: $pink;
+      fill: rgba(0, 0, 0, .1);
     }
   }
 }
