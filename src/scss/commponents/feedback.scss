@@ -17,5 +17,13 @@
   &__info {
     @include font("Open Sans", 24px, 300, normal);
     color: $pink;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      color: $blueHover;
+    }
   }
 }
