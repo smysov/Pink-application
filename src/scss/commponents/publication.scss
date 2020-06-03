@@ -2,7 +2,7 @@
 
   &__text {
     @extend .photo__text;
-    text-align: center;
+    margin-bottom: 41px;
   }
 
   &__inner {
@@ -23,6 +23,7 @@
   &__inner-filter {
     border-bottom: 1px solid #dddfe0;
     padding-bottom: 28px;
+    text-align: center;
 
     &--hidden {
       display: none;
@@ -35,8 +36,8 @@
 
   &__icons {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+    justify-content: space-evenly;
+    margin-bottom: 19px;
   }
 
   &__icon {
@@ -56,6 +57,7 @@
   border-color: $pink;
   transition: .5s linear;
   margin-bottom: 12px;
+  padding: 15px 35px;
 
   &:hover {
     background-color: $pink;
@@ -89,7 +91,7 @@
 // Инпут Рандж
 
 .publication__input {
-  width: 100%;
+  width: 240px;
   appearance: none;
   height: 2px;
   background-color: #000;

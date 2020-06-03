@@ -4,13 +4,13 @@
 
   &__text {
     @include font("Open Sans", 14px, 400, normal);
-    margin-right: 15px;
+    margin-right: 16px;
   }
 
   &__logo {
     fill: $pink;
-    width: 35px;
-    height: 40px;
+    width: 27px;
+    height: 34px;
     transition: .5s linear;
 
     &:hover {

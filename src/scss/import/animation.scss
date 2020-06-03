@@ -1,0 +1,16 @@
+@keyframes scale {
+  0% {
+    fill: red;
+    transform: translateX(-5000px);
+  }
+
+  50% {
+    transform: translateX(100px) scale(0.5);
+    fill: red;
+  }
+  
+  100% {
+    transform: translateX(0) scale(1);
+    fill: white;
+  }
+}

@@ -44,7 +44,8 @@
     <main class="main">
       <section class="section hero hero--form">
         <div class="container">
-          <h2 class="hero__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+          <h2 class="hero__title hero__title--form">Конкурс на самое безбашенное путешествие с
+            Пинк</h2>
         </div>
       </section>
 
@@ -54,7 +55,7 @@
           <p class="application__text">Поделитесь своей историей и получите шанс выиграть
             ценный
             приз — 1000 миль на вашу бонусную
-            карту! Пожалуйста, заполните форму ниже:</p>
+            карту!</p>
         </div>
 
         <form class="form" action="#" method="POST">
@@ -93,26 +94,26 @@
                         акулой</label>
                     </div>
                     <div class="form__line form__line--button">
+                      <input class="form__checkbox" type="checkbox" id="beach"
+                        name="achievement" checked>
+                      <label class="form__title-checkbox" for="beach">Обгорел на пляже</label>
+                    </div>
+                    <div class="form__line form__line--button">
                       <input class="form__checkbox" type="checkbox" id="chuck"
                         name="achievement">
                       <label class="form__title-checkbox" for="chuck">Видел Чака
                         Норриса</label>
                     </div>
                     <div class="form__line form__line--button">
-                      <input class="form__checkbox" type="checkbox" id="tower"
-                        name="achievement" checked>
-                      <label class="form__title-checkbox" for="tower">Удержал башню</label>
-                    </div>
-                    <div class="form__line form__line--button">
-                      <input class="form__checkbox" type="checkbox" id="beach"
-                        name="achievement" checked>
-                      <label class="form__title-checkbox" for="beach">Обгорел на пляже</label>
-                    </div>
-                    <div class="form__line form__line--button">
                       <input class="form__checkbox" type="checkbox" id="souvenirs"
                         name="achievement">
                       <label class="form__title-checkbox" for="souvenirs">Накупил
                         сувениров</label>
+                    </div>
+                    <div class="form__line form__line--button">
+                      <input class="form__checkbox" type="checkbox" id="tower"
+                        name="achievement" checked>
+                      <label class="form__title-checkbox" for="tower">Удержал башню</label>
                     </div>
                     <div class="form__line form__line--button">
                       <input class="form__checkbox" type="checkbox" id="hotel"
@@ -140,7 +141,7 @@
                     <div class="form__line form__line--input">
                       <label class="form__title" for="email">Адрес почты</label>
                       <input class="form__input form__input--email" type="email" id="email"
-                        placeholder="Номер, пожалуйста">
+                        placeholder="Введите почту*">
                     </div>
                   </div>
                 </fieldset>
@@ -152,16 +153,16 @@
                 <fieldset class="form__border">
                   <legend class="form__title-legend">С каким приложением
                     путешествовали?</legend>
-                  <div class="form__line form__line--button">
+                  <div class="form__line form__line--radio">
                     <input class="form__radio" type="radio" id="ios" name="application"
                       checked>
                     <label for="ios" class="form__title-radio">Pink для IOS</label>
                   </div>
-                  <div class="form__line form__line--button">
+                  <div class="form__line form__line--radio">
                     <input class="form__radio" type="radio" id="android" name="application">
                     <label class="form__title-radio" for="android">Pink на Android</label>
                   </div>
-                  <div class="form__line form__line--button">
+                  <div class="form__line form__line--radio">
                     <input class="form__radio" type="radio" id="windows" name="application">
                     <label class="form__title-radio" for="windows">Windows Phone</label>
                   </div>
@@ -173,7 +174,7 @@
             <div class="form__column">
               <div class="container">
                 <fieldset class="form__border">
-                  <legend class="form__title-legend form__title-legend--emotion">Опешите свои
+                  <legend class="form__title-legend form__title-legend--emotion">Опишите свои
                     эмоции
                   </legend>
                   <div class="form__inner">
@@ -187,11 +188,10 @@
             <div class="form__column">
               <div class="container">
                 <div class="form__line form__line--centred">
-                  <button id="sendButton" class="form__button button button--green"
+                  <button id="sendButton" class="form__button button--green"
                     type="submit">Отправить форму</button>
                   <div class="form__note"><span class="form__necessarily">*</span> —
-                    обязательные
-                    для заполнения поля</div>
+                    обязательные поля</div>
                 </div>
               </div>
             </div>

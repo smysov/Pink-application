@@ -10,6 +10,7 @@
     min-height: 729px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
   }
 
   &--index {
@@ -20,11 +21,20 @@
   &--photo {
     min-height: 238px;
 
+
     .hero__title {
       @include font("Open Sans", 24px, 300, normal);
       visibility: visible;
       text-align: center;
       padding-top: 100px;
+
+      &--photo {
+        padding-top: 96px;
+      }
+
+      &--form {
+        padding-top: 98px;
+      }
     }
   }
 

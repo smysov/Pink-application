@@ -1,5 +1,10 @@
 .photo {
 
+  &__inner {
+    padding: 43px 18px 0;
+    margin-bottom: 49px;
+  }
+
   &__image {
 
     &--day {
@@ -15,8 +20,6 @@
     @include font("Open Sans", 14px, 400, normal);
     line-height: 30px;
     text-align: center;
-    padding: 52px 18px 0;
-    margin-bottom: 54px;
   }
 
   &__scale {
@@ -34,33 +37,32 @@
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
-    padding: 22px 20px;
-    margin-bottom: 20px;
+    padding: 18px;
+    margin-bottom: 26px;
   }
 
   &__author {
     @include font("Open Sans", 14px, 700, normal);
     line-height: 24px;
-    margin-bottom: 5px;
   }
 
   &__time {
     font-size: 12px;
     font-weight: 300;
     color: #283645;
+    text-transform: uppercase;
   }
 
   &__comment {
     @include font("Open Sans", 14px, 400, normal);
     line-height: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   &__likes {
     display: flex;
     align-items: center;
     order: 1;
-    padding-bottom: 22px;
   }
 
   &__quantity {

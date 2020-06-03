@@ -3,7 +3,9 @@
   height: 24px;
   fill: #fff;
   transition: .3s ease;
-  
+  animation: scale 3s linear;
+  animation-delay: 1s;
+
 
   &:hover {
     fill: $pink;

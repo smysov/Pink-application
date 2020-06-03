@@ -4,10 +4,11 @@
 ### Что бы развернуть у себя проект необходимо:
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
-
-_$ git clone git@github.com:smysov/Pink-application.git_
-_$ cd pink-application_
-_$ npm install_
+```sh
+$ git clone git@github.com:loftschool/ls-advanced-portfolio.git
+$ cd pink-application
+$ npm install
+```
 
 | Скрипт | Назначение |
 | ------ | ------ |
