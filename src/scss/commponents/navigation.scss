@@ -6,6 +6,10 @@
   visibility: hidden;
   overflow: hidden;
   opacity: 0;
+  
+  @media #{tablet-only} {
+    top: 104px;
+  }
 
   &--active {
     visibility: visible;
