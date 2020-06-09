@@ -1,3 +1,5 @@
+//Основный стили для бургер меню
+
 .hamburger-menu {
   width: 50px;
   height: 24px;
@@ -10,6 +12,8 @@
   align-items: center;
   background: 0 0;
 }
+
+//Стили псевдоэлементов
 
 .hamburger-menu__icon {
   position: relative;
@@ -63,6 +67,8 @@
     }
   }
 }
+
+//Эффекты бургера
 
 .hamburger-menu:hover .hamburger-menu__icon--burger,
 .hamburger-menu:hover .hamburger-menu__icon::before,

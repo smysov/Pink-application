@@ -1,3 +1,5 @@
+//Общие стили блока отзывов
+
 .rewievs {
 
   &__text {
@@ -5,6 +7,12 @@
     line-height: 30px;
     text-align: center;
     margin-bottom: 26px;
+
+    @media #{$tablet-only} {
+      order: -1;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
   }
 
   &__name {
@@ -12,12 +20,25 @@
     @include font("Open Sans", 18px, 700, normal);
     line-height: 30px;
     margin-bottom: 14px;
+
+    @media #{$tablet-only} {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
   }
 
   &__about {
     display: none;
+
+    @media #{$tablet-only} {
+      display: block;
+      @include font("Open Sans", 14px, 400, normal);
+      margin-bottom: 33px;
+    }
   }
 }
+
+//Стили для кнопок переключения слайдов
 
 .rewievs__prev {
   display: none;

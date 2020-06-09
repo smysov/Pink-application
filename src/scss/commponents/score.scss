@@ -1,3 +1,5 @@
+//Стили списка и элементов списка
+
 .score-list {
   width: 285px;
   display: flex;
@@ -10,6 +12,8 @@
     margin-bottom: 30px;
   }
 }
+
+//Стили иконок
 
 .score-list__image {
 transition: .3s linear;

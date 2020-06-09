@@ -1,22 +1,71 @@
+//Стили для галлереи
+
 .photo {
 
+  &--day {
+    margin-bottom: 28px;
+  }
+
+  @media #{$tablet-only} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: #f2f2f2;
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media #{$tablet-only} {
+      width: calc(100% / 2 - 10px);
+      margin-right: 20px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:last-child,
+      &:nth-child(5) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__image {
+
 
     &--day {
       position: relative;
     }
   }
 
+
   &__picture {
     vertical-align: middle;
+
+    &--day {
+
+      @media #{$tablet-only} {
+        height: 509px;
+      }
+    }
   }
 
   &__text {
     @include font("Open Sans", 14px, 400, normal);
     line-height: 30px;
     text-align: center;
-    padding: 52px 18px 0;
-    margin-bottom: 54px;
+    padding: 46px 18px 0;
+    margin-bottom: 49px;
+
+    @media #{$tablet-only} {
+      font-size: 18px;
+      padding: 93px 25px 0;
+      margin-bottom: 76px;
+    }
   }
 
   &__scale {
@@ -28,46 +77,99 @@
     padding: 10px 20px;
     text-transform: uppercase;
     color: #fff;
+
+    @media #{$tablet-only} {
+      top: 57px;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
-    padding: 22px 20px;
-    margin-bottom: 20px;
+    padding: 17px 18px;
+
+    @media #{$tablet-only} {
+      padding: 25px 26px 22px 26px;
+      margin-bottom: 0;
+    }
+
+    &--day {
+
+      @media #{$tablet-only} {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 22px 27px;
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &__author {
     @include font("Open Sans", 14px, 700, normal);
     line-height: 24px;
-    margin-bottom: 5px;
   }
 
   &__time {
     font-size: 12px;
     font-weight: 300;
     color: #283645;
+    text-transform: uppercase;
   }
 
   &__comment {
     @include font("Open Sans", 14px, 400, normal);
     line-height: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 13px;
+    }
+
+    &--day {
+
+      @media #{$tablet-only} {
+        margin-bottom: 12px;
+      }
+    }
   }
 
   &__likes {
     display: flex;
     align-items: center;
     order: 1;
-    padding-bottom: 22px;
+
+
+    &--day {
+
+      @media #{$tablet-only} {
+        order: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    @media #{$tablet-only} {
+      justify-content: space-between;
+    }
   }
 
   &__quantity {
     font-size: 12px;
+    font-weight: 400;
     order: 1;
     text-transform: uppercase;
     color: $pink;
+
+    &--day {
+
+      @media #{$tablet-only} {
+        margin-right: 18px;
+      }
+    }
+
+    @media #{$tablet-only} {
+      order: -1;
+    }
   }
 
   &__amount {
@@ -82,22 +184,19 @@
     height: 13px;
     background-image: url(../../img/decor/icon-heart.svg);
     background-repeat: no-repeat;
-    margin-right: 20px;
+    margin-right: 17px;
+
+    @media #{$tablet-only} {
+      margin-right: 0;
+    }
 
     &:hover {
       opacity: 0.6;
     }
   }
-
-  &__item {
-    background-color: #f2f2f2;
-    margin-bottom: 20px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
 }
+
+//Стиль для активного состояния лайка
 
 .added {
   background-image: url(../../img/decor/icon-heart-added.svg);

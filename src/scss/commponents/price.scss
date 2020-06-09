@@ -1,22 +1,41 @@
+//Стили для списка и элементов списка
+
 .price {
   display: flex;
 
   &__item {
-    flex-shrink: 1;
-    width: 100%;
+    flex: 1 1 152px;
 
     &--hidden {
       display: none;
+
+      @media #{$tablet-only} {
+        display: block;
+      }
     }
 
     &:first-child {
       padding-top: 98px;
+
+      @media #{$tablet-only} {
+        padding-top: 81px;
+      }
     }
   }
+}
 
-  &__inner {
+//Стили ячеек(Шапка, ячейки, иконки)
+
+  .price__inner {
     padding: 13px 15px 18px 22px;
     border: 1px solid #e5e5e5;
+
+    @media #{$tablet-only} {
+      padding: 0;
+      min-height: 45px;
+      padding: 7px 25px 6px 15px;
+      background-color: #fff;
+    }
 
     &--head {
       position: relative;
@@ -27,22 +46,45 @@
       text-align: center;
       padding: 18px 66px 18px 70px;
       background-color: $blue;
+
+      @media #{$tablet-only} {
+        font-size: 16px;
+        padding: 15px 35px 7px;
+      }
     }
 
     &--available {
       background: url(../../img/decor/icon-yes.svg) 93% 50%/31px 21px no-repeat;
+      background-color: #fff;
+
+      @media #{$tablet-only} {
+        background-position: 50% 50%;
+      }
     }
 
     &--unavailable {
       background: url(../../img/decor/icon-no.svg) 92% 41%/27px 26px no-repeat;
+      background-color: #fff;
+
+      @media #{$tablet-only} {
+        background-position: 50% 50%;
+      }
     }
   }
 
-  &__cost {
-    font-size: 24px;
-    font-weight: 300;
+//Стили для стоимости тарифов
+
+.price__cost {
+  font-size: 24px;
+  font-weight: 300;
+
+  @media #{$tablet-only} {
+    font-size: 18px;
+    margin-top: -3px;
   }
 }
+
+//Стили заголовках ячеек
 
 .price {
 
@@ -51,8 +93,22 @@
     font-weight: 400;
     line-height: 30px;
     color: $blue;
+
+    @media #{$tablet-only} {
+      font-size: 14px;
+    }
+
+
+    &--hidden {
+
+      @media #{$tablet-only} {
+        display: none;
+      }
+    }
   }
 }
+
+//Стили для избранного тарифа
 
 .price__title--hit {
 
@@ -64,6 +120,14 @@
     top: 0;
     left: 0;
     background: url(../../img/decor/bg-hit.svg) no-repeat;
+    
+    @media #{$tablet-only} {
+      
+      background: url(../../img/decor/bg-hit-tablet.svg) no-repeat;
+      width: 61px;
+      height: 61px;
+      left: 1px;
+    }
   }
 
   &::after {
@@ -72,5 +136,10 @@
     top: 11%;
     left: 1%;
     transform: rotate(-45deg);
+
+    @media #{$tablet-only} {
+      top: 9%;
+      left: 3%;
+    }
   }
 }

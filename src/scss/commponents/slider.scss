@@ -1,18 +1,10 @@
+//Стили для слайдера
+
 .slider {
   position: relative;
 
   &__inner {
     overflow: hidden;
-  }
-
-  &__slides {
-    display: flex;
-    width: 300%;
-    transition: transform .5s ease;
-
-    &--table {
-      display: table;
-    }
   }
 
   &__list {
@@ -28,19 +20,25 @@
     width: 100%;
     flex-shrink: 0;
   }
+}
 
-  &__toggles {
+//Стили списка и элементов списка точек переключения
+
+  .slider__toggles {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-bottom: 44px;
     padding-left: 15px;
   }
 
-  &__toggle {
+  .slider__toggle {
     margin-right: 17px;
   }
 
-  &__button {
+//Стили кнопок перекличения(дотс)
+
+  .slider__button {
     width: 7px;
     height: 7px;
     padding: 0;
@@ -58,6 +56,11 @@
       padding: 4px;
       border: 2px solid #000;
       background-color: #fff;
+
+      @media #{$tablet-only} {
+        padding: 3px;
+        border: 3px solid #000;
+      }
     }
 
     &:hover {
@@ -68,4 +71,3 @@
       background-color: rgba(0, 0, 0, .2);
     }
   }
-}

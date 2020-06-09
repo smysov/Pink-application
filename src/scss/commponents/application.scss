@@ -1,3 +1,13 @@
+//Подзаголовок формы
+
 .application__text {
-  @extend .photo__text;
+  @include font("Open Sans", 14px, 400, normal);
+  line-height: 30px;
+  text-align: center;
+  padding-top: 45px;
+  margin-bottom: 40px;
+}
+
+.application__info {
+  display: none;
 }

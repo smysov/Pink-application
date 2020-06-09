@@ -1,3 +1,4 @@
+//Общие стили формы и заголовки
 .form {
 
   &__inner {
@@ -9,8 +10,8 @@
 
     &:nth-child(2),
     &:nth-child(4) {
-      padding: 40px 0;
-      margin-bottom: 40px;
+      padding-top: 40px;
+      margin-bottom: 29px;
       background-color: #f2f2f2;
     }
   }
@@ -28,7 +29,7 @@
   }
 
   &__title-legend {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     padding: 0 30px;
     text-align: center;
 
@@ -59,7 +60,7 @@
     &--button {
       display: flex;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 62px;
     }
   }
 
@@ -81,7 +82,7 @@
 
     &--patronymic,
     &--email {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     &::placeholder {
@@ -115,33 +116,33 @@
   }
 
   &__title-checkbox {
-    padding-left: 60px;
+    padding-left: 68px;
 
     &::before {
       content: "";
       position: absolute;
       left: 0;
       top: -50%;
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       background-color: #fff;
-      border: 2px solid rgba(0, 0, 0, .2);
+      border: 2px solid rgba(0, 0, 0, .1);
       transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
 
     &::after {
       content: "";
       position: absolute;
-      left: 13px;
-      top: 5px;
-      width: 15px;
+      left: 9px;
+      top: 3px;
+      width: 20px;
       height: 6px;
       border-radius: 1px;
-      border-left: 4px solid $pink;
-      border-bottom: 4px solid $pink;
+      border-left: 3px solid $pink;
+      border-bottom: 3px solid $pink;
       transform: rotate(-45deg) scale(4);
       opacity: 0;
-      transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+      transition: 0.4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
   }
 
@@ -189,7 +190,7 @@
   }
 
   &__title-radio {
-    padding-left: 65px;
+    padding-left: 70px;
 
     &::before {
       content: "";
@@ -199,7 +200,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 2px solid rgba(0, 0, 0, .2);
+      border: 2px solid rgba(0, 0, 0, .1);
       transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
 
@@ -210,10 +211,10 @@
       left: 15px;
       width: 14px;
       height: 14px;
-      background-color: #d22856;
+      background-color: $pink;
       border-radius: 50%;
       opacity: 0;
-      transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+      transition: 0.4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
   }
 }
@@ -224,11 +225,12 @@
   &__comment {
     padding: 23px 20px;
     min-height: 200px;
+    line-height: 30px;
     resize: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
     transition: .4s linear;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 
     &::placeholder {
       @extend .form__input::placeholder;

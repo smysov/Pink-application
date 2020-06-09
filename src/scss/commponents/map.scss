@@ -1,7 +1,11 @@
 .map {
   position: relative;
-  min-height: 200px;
+  height: 200px;
   overflow: hidden;
+
+  @media #{$tablet-only} {
+    height: 375px;
+  }
 
   &::before {
     content: "";
@@ -17,5 +21,9 @@
     background-position: 50% 0;
     background-size: 100% 100%;
     z-index: 1;
+
+    @media #{$tablet-only} {
+      height: 70px;
+    }
   }
 }

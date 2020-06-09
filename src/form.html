@@ -33,7 +33,8 @@
                 <a class="site-list__link" href="form.html">Конкурс</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="https://htmlacademy.ru/study" target="_blank">Html
+                <a class="site-list__link" href="https://htmlacademy.ru/study"
+                  target="_blank">Html
                   academy</a>
               </li>
             </ul>
@@ -48,7 +49,8 @@
     <main class="main">
       <section class="section hero hero--form">
         <div class="container">
-          <h2 class="hero__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+          <h2 class="hero__title hero__title--form">Конкурс на самое безбашенное путешествие с
+            Пинк</h2>
         </div>
       </section>
 
@@ -58,7 +60,8 @@
           <p class="application__text">Поделитесь своей историей и получите шанс выиграть
             ценный
             приз — 1000 миль на вашу бонусную
-            карту! Пожалуйста, заполните форму ниже:</p>
+            карту!</p>
+          <p class="application__info">Пожалуйста, заполните форму ниже:</p>
         </div>
 
         <form class="form" action="#" method="POST">
@@ -97,26 +100,26 @@
                         акулой</label>
                     </div>
                     <div class="form__line form__line--button">
+                      <input class="form__checkbox" type="checkbox" id="beach"
+                        name="achievement" checked>
+                      <label class="form__title-checkbox" for="beach">Обгорел на пляже</label>
+                    </div>
+                    <div class="form__line form__line--button">
                       <input class="form__checkbox" type="checkbox" id="chuck"
                         name="achievement">
                       <label class="form__title-checkbox" for="chuck">Видел Чака
                         Норриса</label>
                     </div>
                     <div class="form__line form__line--button">
-                      <input class="form__checkbox" type="checkbox" id="tower"
-                        name="achievement" checked>
-                      <label class="form__title-checkbox" for="tower">Удержал башню</label>
-                    </div>
-                    <div class="form__line form__line--button">
-                      <input class="form__checkbox" type="checkbox" id="beach"
-                        name="achievement" checked>
-                      <label class="form__title-checkbox" for="beach">Обгорел на пляже</label>
-                    </div>
-                    <div class="form__line form__line--button">
                       <input class="form__checkbox" type="checkbox" id="souvenirs"
                         name="achievement">
                       <label class="form__title-checkbox" for="souvenirs">Накупил
                         сувениров</label>
+                    </div>
+                    <div class="form__line form__line--button">
+                      <input class="form__checkbox" type="checkbox" id="tower"
+                        name="achievement" checked>
+                      <label class="form__title-checkbox" for="tower">Удержал башню</label>
                     </div>
                     <div class="form__line form__line--button">
                       <input class="form__checkbox" type="checkbox" id="hotel"
@@ -144,7 +147,7 @@
                     <div class="form__line form__line--input">
                       <label class="form__title" for="email">Адрес почты</label>
                       <input class="form__input form__input--email" type="email" id="email"
-                        placeholder="Номер, пожалуйста">
+                        placeholder="Введите почту*">
                     </div>
                   </div>
                 </fieldset>
@@ -191,11 +194,10 @@
             <div class="form__column">
               <div class="container">
                 <div class="form__line form__line--centred">
-                  <button id="sendButton" class="form__button button button--green"
+                  <button id="sendButton" class="form__button button--green"
                     type="submit">Отправить форму</button>
                   <div class="form__note"><span class="form__necessarily">*</span> —
-                    обязательные
-                    для заполнения поля</div>
+                    обязательные поля</div>
                 </div>
               </div>
             </div>
