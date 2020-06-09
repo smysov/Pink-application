@@ -52,12 +52,6 @@
     &__picture {
       vertical-align: middle;
 
-      &--day {
-
-        @media #{$tablet-only} {
-          height: 509px;
-        }
-      }
     }
 
     &__author {
@@ -72,8 +66,6 @@
   @include font("Open Sans", 14px, 400, normal);
   line-height: 30px;
   text-align: center;
-  padding: 46px 18px 0;
-  margin-bottom: 49px;
 
   @media #{$tablet-only} {
     font-size: 18px;

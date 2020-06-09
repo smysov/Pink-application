@@ -1,5 +1,5 @@
   //Заголовок и подзаголовок блока "Приемущества"
-  
+
   .advantages__title,
   .advantages__subtitle {
     @include font("Open Sans", 24px, 300, normal);
@@ -33,7 +33,7 @@
     }
   }
 
-// Список приемуществ
+  // Список приемуществ
 
   .advantages-list {
     padding-top: 89px;
@@ -45,8 +45,9 @@
 
       @media (min-resolution: 144dpi),
       (min-resolution: 1.5dppx) {
-        background: url(../../img/decor/iphone-screen-mobile@2x.png) center bottom -40px/157px 320px no-repeat;
-        background-color: #f2f2f2;
+        background: url(../../img/decor/iphone-screen-mobile@2x.png) center bottom -40px/157px 320px no-repeat,
+          url(../../img/decor/bg-triangle-white.svg) 50% 0/100% auto no-repeat;
+          background-color: #f2f2f2;
       }
     }
 
@@ -59,8 +60,11 @@
         url(../../img/decor/bg-triangle-white.svg) 50% 0/175% 16% no-repeat;
       background-color: #f2f2f2;
 
-      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background: url(../../img/decor/iphone-screen-3-tablet@2x.png) 21px bottom/268px 481px no-repeat;
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background: url(../../img/decor/iphone-screen-3-tablet@2x.png) 21px bottom/268px 481px no-repeat,
+          url(../../img/decor/bg-triangle-white.svg) 50% 0/175% 16% no-repeat;
+        background-color: #f2f2f2;
       }
     }
 
@@ -90,19 +94,19 @@
     }
   }
 
-//Заголовки и подзаколовки списка приемуществ
+  //Заголовки и подзаколовки списка приемуществ
 
-    .advantages-list__title {
-      @include font ("Open Sans", 18px, 700, normal);
-      line-height: 10px;
-      margin-bottom: 15px;
+  .advantages-list__title {
+    @include font ("Open Sans", 18px, 700, normal);
+    line-height: 10px;
+    margin-bottom: 15px;
 
-      @media #{$tablet-only} {
-        margin-bottom: 19px;
-      }
+    @media #{$tablet-only} {
+      margin-bottom: 19px;
     }
+  }
 
-    .advantages-list__description {
-      @include font ("Open Sans", 14px, 400, normal);
-      line-height: 24px;
-    }
+  .advantages-list__description {
+    @include font ("Open Sans", 14px, 400, normal);
+    line-height: 24px;
+  }
