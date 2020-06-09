@@ -1,3 +1,5 @@
+//Стили для навигации и меню
+
 .main-navigation {
   position: absolute;
   top: 65px;
@@ -6,6 +8,10 @@
   visibility: hidden;
   overflow: hidden;
   opacity: 0;
+  
+  @media #{$tablet-only} {
+    top: 104px;
+  }
 
   &--active {
     visibility: visible;
@@ -28,6 +34,8 @@
     }
   }
 }
+
+//Стили для элементов списка(неактивное состояние)
 
 .site-list__item {
   width: 100%;
@@ -54,6 +62,8 @@
     transition-delay: .8s;
   }
 }
+
+//Стили для ссылок
 
 .site-list__link {
   padding: 21px 0;

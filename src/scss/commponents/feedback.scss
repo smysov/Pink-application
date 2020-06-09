@@ -1,3 +1,5 @@
+//Список контактов для связи
+
 .feedback {
   display: flex;
   flex-direction: column;
@@ -5,13 +7,39 @@
   text-align: center;
   margin-bottom: 40px;
 
+  @media #{$tablet-only} {
+    flex-flow: row wrap;
+    margin-bottom: 60px;
+  }
+
   &__item {
     margin-bottom: 23px;
+
+    @media #{$tablet-only} {
+      flex: 1 1 250px;
+      margin-bottom: 50px;
+    }
+
+    &:last-child {
+
+      @media #{$tablet-only} {
+        margin-bottom: 0;
+      }
+    }
   }
+}
+
+//Заголовки и текстовая информация
+
+.feedback {
 
   &__title {
     @include font("Open Sans", 18px, 700, normal);
     margin-bottom: 6px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 7px;
+    }
   }
 
   &__info {

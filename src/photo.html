@@ -14,31 +14,36 @@
       <div class="container">
         <div class="header__inner">
           <a href="index.html" class="header__logo logo">
-            <svg class="logo__icon">
+            <svg class="logo__icon logo__icon--mobile">
               <use xlink:href="img/icons/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
+            <svg class="logo__icon logo__icon--tablet">
+              <use xlink:href="img/icons/sprite.svg#logo-pink-blue-mobile"></use>
+            </svg>
           </a>
+          <nav class="main-navigation">
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="https://htmlacademy.ru/study"
+                  target="_blank">Html
+                  academy</a>
+              </li>
+            </ul>
+          </nav>
           <button class="hamburger-menu" type="button">
             <span class="hamburger-menu__icon hamburger-menu__icon--burger"></span>
           </button>
         </div>
       </div>
-      <nav class="main-navigation">
-        <ul class="main-navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/study">Html academy</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main">
@@ -62,18 +67,21 @@
           </div>
 
           <div class="photo__image photo__image--day">
-            <img class="photo__picture photo__picture--day"
-              src="./img/content/panorama-mobile@1x.jpg" alt="Фотография дня">
+            <picture>
+              <source media="(min-width: 660px)"
+                srcset="./img/content/panorama-tablet@1x.jpg 1x, ./img/content/panorama-tablet@2x.jpg 2x">
+              <img class="photo__picture photo__picture--day"
+                src="./img/content/panorama-mobile@1x.jpg"
+                srcset="./img/content/panorama-mobile@2x.jpg 2x" alt="Фотография дня">
+            </picture>
             <a class="photo__scale" href="#">Панорама дня</a>
           </div>
 
           <div class="container">
-            <div class="photo__info">
-
+            <div class="photo__info photo__info--day">
               <div class="photo__author photo__author--day">Анна
                 <span class="photo__time photo__time--day">(5 минут назад)</span>
               </div>
-
               <div class="photo__likes photo__likes--day">
                 <div class="photo__quantity photo__quantity--day">нравится:<span
                     class="photo__amount">215</span></div>
@@ -98,8 +106,12 @@
           <ul class="gallery__list photo">
             <li class="photo__item">
               <div class="photo__image">
-                <img class="photo__picture" src="img/content/photo-car-mobile@1x.jpg"
-                  alt="Машина">
+                <picture>
+                  <source media="(min-width: 660px)"
+                    srcset="./img/content/photo-car-tablet@1x.jpg 1x, ./img/content/photo-car-tablet@2x.jpg 2x">
+                  <img class="photo__picture" src="./img/content/photo-car-mobile@1x.jpg"
+                    srcset="./img/content/photo-car-mobile@2x.jpg 2x" alt="Машина">
+                </picture>
               </div>
               <div class="photo__info">
                 <div class="photo__author">Левон
@@ -118,8 +130,12 @@
             </li>
             <li class="photo__item">
               <div class="photo__image">
-                <img class="photo__picture" src="img/content/photo-drumset-mobile@1x.jpg"
-                  alt="Барабаны">
+                <picture>
+                  <source media="(min-width: 660px)"
+                    srcset="./img/content/photo-drumset-tablet@1x.jpg 1x, ./img/content/photo-drumset-tablet@2x.jpg 2x">
+                  <img class="photo__picture" src="img/content/photo-drumset-mobile@1x.jpg"
+                    srcset="./img/content/photo-drumset-mobile@2x.jpg 2x" alt="Барабаны">
+                </picture>
               </div>
               <div class="photo__info">
                 <div class="photo__author">Антон
@@ -128,20 +144,21 @@
                 <p class="photo__comment">Соседи будут рады!
                 </p>
                 <div class="photo__likes">
-                  <div class="photo__likes">
-                    <div class="photo__quantity">нравится:<span
-                        class="photo__amount">666</span></div>
-                    <button class="photo__like" type="button">
-                    </button>
+                  <div class="photo__quantity">нравится:<span class="photo__amount">666</span>
                   </div>
+                  <button class="photo__like" type="button">
+                  </button>
                 </div>
               </div>
             </li>
-
             <li class="photo__item">
               <div class="photo__image">
-                <img class="photo__picture" src="img/content/photo-window-mobile@1x.jpg"
-                  alt="Окно">
+                <picture>
+                  <source media="(min-width: 660px)"
+                    srcset="./img/content/photo-window-tablet@1x.jpg 1x, ./img/content/photo-window-tablet@2x.jpg 2x">
+                  <img class="photo__picture" src="./img/content/photo-window-mobile@1x.jpg"
+                    srcset="./img/content/photo-window-mobile@2x.jpg 2x" alt="Окно">
+                </picture>
               </div>
               <div class="photo__info">
                 <div class="photo__author">Борис
@@ -150,20 +167,21 @@
                 <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.
                 </p>
                 <div class="photo__likes">
-                  <div class="photo__likes">
-                    <div class="photo__quantity">нравится:<span
-                        class="photo__amount">215</span></div>
-                    <button class="photo__like" type="button">
-                    </button>
+                  <div class="photo__quantity">нравится:<span class="photo__amount">215</span>
                   </div>
+                  <button class="photo__like" type="button">
+                  </button>
                 </div>
               </div>
             </li>
-
             <li class="photo__item">
               <div class="photo__image">
-                <img class="photo__picture" src="img/content/photo-fair-mobile@1x.jpg"
-                  alt="Кубанская бахча">
+                <picture>
+                  <source media="(min-width: 660px)"
+                    srcset="./img/content/photo-fair-tablet@1x.jpg 1x, ./img/content/photo-fair-tablet@2x.jpg 2x">
+                  <img class="photo__picture" src="./img/content/photo-fair-mobile@1x.jpg"
+                    srcset="./img/content/photo-fair-mobile@2x.jpg 2x" alt="Кубанская бахча">
+                </picture>
               </div>
               <div class="photo__info">
                 <div class="photo__author">Сергей
@@ -181,8 +199,12 @@
             </li>
             <li class="photo__item">
               <div class="photo__image">
-                <img class="photo__picture" src="img/content/photo-pov-mobile@1x.jpg"
-                  alt="Обрыв">
+                <picture>
+                  <source media="(min-width: 660px)"
+                    srcset="./img/content/photo-pov-tablet@1x.jpg 1x, ./img/content/photo-pov-tablet@2x.jpg 2x">
+                  <img class="photo__picture" src="./img/content/photo-pov-mobile@1x.jpg"
+                    srcset="./img/content/photo-pov-mobile@2x.jpg 2x" alt="Обрыв">
+                </picture>
               </div>
               <div class="photo__info">
                 <div class="photo__author">Максим
@@ -200,8 +222,12 @@
             </li>
             <li class="photo__item">
               <div class="photo__image">
-                <img class="photo__picture" src="img/content/photo-wing-mobile@1x.jpg"
-                  alt="Перелёт">
+                <picture>
+                  <source media="(min-width: 660px)"
+                    srcset="./img/content/photo-wing-tablet@1x.jpg 1x, ./img/content/photo-wing-tablet@2x.jpg 2x">
+                  <img class="photo__picture" src="./img/content/photo-wing-mobile@1x.jpg"
+                    srcset="./img/content/photo-wing-mobile@2x.jpg 2x" alt="Перелёт">
+                </picture>
               </div>
               <div class="photo__info">
                 <div class="photo__author">Надежда
@@ -231,8 +257,11 @@
           <div class="container">
 
             <div class="publication__photo">
-              <img class="publication__picture" src="img/content/photo-road-mobile@1x.jpg"
-                alt="Ваша публикация">
+              <picture>
+                <source media="(min-width: 660px)" srcset="./img/content/photo-road-tablet@1x.jpg 1x, ./img/content/photo-road-tablet@2x.jpg 2x">
+                <img class="publication__picture" src="./img/content/photo-road-mobile@1x.jpg" srcset="./img/content/photo-road-mobile@2x.jpg 2x"
+                  alt="Ваша публикация">
+              </picture>
             </div>
             <form class="publication__send" action="#" method="get">
               <div class="publication__functions">
@@ -265,18 +294,18 @@
                         max="100" step="1" value="80">
                     </div>
                     <div class="publication__inner-filter publication__inner-filter--hidden">
-                      <input class="publication__input" id="contrast" type="range" min="0" max="100" step="1"
-                        value="60">
+                      <input class="publication__input" id="contrast" type="range" min="0"
+                        max="100" step="1" value="60">
                       <div class="publication__filter"></div>
                     </div>
                   </div>
 
-                  <div class="publication__buttons">
-                    <button class="publication__send button button--send"
-                      type="submit">Запостить</button>
-                    <button class="publication__reset button button--reset"
-                      type="reset">Отмена</button>
-                  </div>
+                </div>
+                <div class="publication__buttons">
+                  <button class="publication__send button button--send"
+                    type="submit">Запостить</button>
+                  <button class="publication__reset button button--reset"
+                    type="reset">Отмена</button>
                 </div>
             </form>
 

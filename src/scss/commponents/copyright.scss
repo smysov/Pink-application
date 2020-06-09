@@ -1,6 +1,14 @@
+//Блок с копирайтом(лого и текст)
+
 .copyright {
   display: flex;
   align-items: inherit;
+
+  @media #{$tablet-only} {
+    align-items: center;
+    align-self: flex-start;
+    padding-top: 10px;
+  }
 
   &__text {
     @include font("Open Sans", 14px, 400, normal);
@@ -12,6 +20,11 @@
     width: 27px;
     height: 34px;
     transition: .5s linear;
+
+    @media #{$tablet-only} {
+      width: 27px;
+      height: 32px;
+    }
 
     &:hover {
       fill: #000;

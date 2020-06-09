@@ -1,3 +1,7 @@
 .gallery__list {
-  margin-bottom: 44px;
+  margin-bottom: 50px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 100px;
+  }
 }

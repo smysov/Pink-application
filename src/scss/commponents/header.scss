@@ -1,3 +1,5 @@
+//Стили для шапки и обёртки
+
 .header {
   position: absolute;
   top: 0;
@@ -7,6 +9,10 @@
   background-color: $header;
   min-height: 65px;
 
+  @media #{$tablet-only} {
+    min-height: 104px;
+  }
+
   &--background {
     background-color: $blue;
   }
@@ -15,9 +21,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__logo {
     padding: 20px 0;
+
+    @media #{$tablet-only} {
+      padding: 21px 0;
+    }
   }
 }

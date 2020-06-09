@@ -1,3 +1,7 @@
 .study {
   display: none;
+
+  @media #{$tablet-only} {
+    display: block;
+  }
 }

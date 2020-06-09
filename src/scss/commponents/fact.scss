@@ -1,0 +1,56 @@
+//Блок с исследованием
+
+.fact-list {
+  padding-left: 310px;
+  margin-bottom: 85px;
+
+  &__title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 9px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 238px;
+      height: 276px;
+      left: -308px;
+      top: -34px;
+      background: url(../../img/decor/icon-timer.svg) no-repeat;
+    }
+
+    &::after {
+      content: "24";
+      position: absolute;
+      font-family: "Open Sans",
+        Arial,
+        sans-serif;
+      font-size: 96px;
+      font-weight: 700;
+      color: #d22856;
+      top: 19px;
+      left: -291px;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+      padding: 64px 34px 76px 32px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $blue;
+    margin-bottom: 11px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $pink;
+    text-decoration: underline;
+  }
+}

@@ -14,31 +14,36 @@
       <div class="container">
         <div class="header__inner">
           <a href="index.html" class="header__logo logo">
-            <svg class="logo__icon">
+            <svg class="logo__icon logo__icon--mobile">
               <use xlink:href="img/icons/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
+            <svg class="logo__icon logo__icon--tablet">
+              <use xlink:href="img/icons/sprite.svg#logo-pink-blue-mobile"></use>
+            </svg>
           </a>
+          <nav class="main-navigation">
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="https://htmlacademy.ru/study"
+                  target="_blank">Html
+                  academy</a>
+              </li>
+            </ul>
+          </nav>
           <button class="hamburger-menu" type="button">
             <span class="hamburger-menu__icon hamburger-menu__icon--burger"></span>
           </button>
         </div>
       </div>
-      <nav class="main-navigation">
-        <ul class="main-navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/study">Html academy</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main">
@@ -56,6 +61,7 @@
             ценный
             приз — 1000 миль на вашу бонусную
             карту!</p>
+          <p class="application__info">Пожалуйста, заполните форму ниже:</p>
         </div>
 
         <form class="form" action="#" method="POST">

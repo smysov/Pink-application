@@ -1,3 +1,5 @@
+//Общие стили блока с тарифами
+
 .tarrifs {
   background-image: url(../../img/decor/bg-triangle-white.svg);
   background-repeat: no-repeat;
@@ -6,4 +8,8 @@
   background-color: #f2f2f2;
   padding-top: 84px;
   padding-bottom: 99px;
+
+  @media #{$tablet-only} {
+    padding: 63px 0;
+  }
 }

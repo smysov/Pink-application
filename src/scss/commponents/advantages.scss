@@ -1,24 +1,68 @@
+  //Заголовок и подзаголовок блока "Приемущества"
+  
   .advantages__title,
   .advantages__subtitle {
     @include font("Open Sans", 24px, 300, normal);
     text-align: center;
+
+    @media #{$tablet-only} {
+      font-size: 40px;
+    }
   }
 
   .advantages__title {
-    margin-top: 45px;
+    padding-top: 45px;
     margin-bottom: 38px;
+
+
+    @media #{$tablet-only} {
+      padding-top: 51px;
+      margin-bottom: 3px;
+    }
   }
 
   .advantages__subtitle {
     margin-bottom: 35px;
+
+    br {
+      display: none;
+
+      @media #{$tablet-only} {
+        display: block;
+      }
+    }
   }
 
+// Список приемуществ
+
   .advantages-list {
-    background:
-      url(../../img/decor/bg-triangle-white.svg) 50% 0/100% auto no-repeat,
-      url(../../img/decor/iphone-screen-mobile@1x.png) center bottom -40px no-repeat;
-    background-color: #f2f2f2;
     padding-top: 89px;
+
+    @media #{$mobile-only} {
+      background: url(../../img/decor/bg-triangle-white.svg) 50% 0/100% auto no-repeat,
+        url(../../img/decor/iphone-screen-mobile@1x.png) center bottom -40px/157px 320px no-repeat;
+      background-color: #f2f2f2;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background: url(../../img/decor/iphone-screen-mobile@2x.png) center bottom -40px/157px 320px no-repeat;
+        background-color: #f2f2f2;
+      }
+    }
+
+    @media #{$tablet-only} {
+      min-height: 486px;
+      padding-top: 98px;
+      padding-left: 310px;
+      margin-bottom: 95px;
+      background: url(../../img/decor/iphone-screen-3-tablet@1x.png) 21px bottom/268px 481px no-repeat,
+        url(../../img/decor/bg-triangle-white.svg) 50% 0/175% 16% no-repeat;
+      background-color: #f2f2f2;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url(../../img/decor/iphone-screen-3-tablet@2x.png) 21px bottom/268px 481px no-repeat;
+      }
+    }
 
 
     &__item {
@@ -28,23 +72,37 @@
       padding: 0 20px;
       margin-bottom: 42px;
 
+      @media #{$tablet-only} {
+        text-align: left;
+      }
+
       &:nth-child(3) {
         margin-bottom: 0;
       }
 
       &--friends {
-        min-height: 385px;
         padding-bottom: 322px;
+
+        @media #{$tablet-only} {
+          padding-bottom: 40px;
+        }
       }
     }
+  }
 
-    &__title {
+//Заголовки и подзаколовки списка приемуществ
+
+    .advantages-list__title {
       @include font ("Open Sans", 18px, 700, normal);
       line-height: 10px;
       margin-bottom: 15px;
+
+      @media #{$tablet-only} {
+        margin-bottom: 19px;
+      }
     }
 
-    &__description {
+    .advantages-list__description {
+      @include font ("Open Sans", 14px, 400, normal);
       line-height: 24px;
     }
-  }
