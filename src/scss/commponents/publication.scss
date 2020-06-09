@@ -84,6 +84,7 @@
       flex-direction: column;
       justify-content: space-between;
       flex-basis: 203px;
+      flex-grow: 1;
       margin-bottom: 0;
     }
   }
@@ -176,7 +177,7 @@
 // Инпут Рандж
 
 .publication__input {
-  width: 240px;
+  width: 100%;
   appearance: none;
   height: 2px;
   background-color: #000;

@@ -1,5 +1,6 @@
 //Общие стили формы и заголовки
 .form {
+  width: 100%;
 
   &__inner {
     display: flex;
@@ -57,7 +58,8 @@
       flex-direction: column;
     }
 
-    &--button {
+    &--button,
+    &--radio {
       display: flex;
       align-items: center;
       margin-bottom: 62px;
@@ -168,6 +170,7 @@
       border-color: $pinkHover;
     }
   }
+}
 
   .form__radio {
     position: absolute;
@@ -190,7 +193,7 @@
     }
   }
 
-  &__title-radio {
+  .form__title-radio {
     padding-left: 70px;
 
     &::before {
@@ -218,7 +221,6 @@
       transition: 0.4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
   }
-}
 
 //Текстария
 .form {
