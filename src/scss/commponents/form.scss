@@ -1,4 +1,4 @@
-//Общие стили формы и заголовки
+//Стили формы и сеткм
 .form {
   width: 100%;
 
@@ -9,13 +9,194 @@
 
   &__column {
 
-    &:nth-child(2),
+    &:nth-child(2) {
+      padding-top: 40px;
+      margin-bottom: 29px;
+      background: #f2f2f2;
+
+      @media #{$tablet-only} {
+        order: 4;
+        background: none;
+        padding-top: 55px;
+        margin-bottom: 59px;
+      }
+    }
+
+
+    &:nth-child(3) {
+
+      @media #{$tablet-only} {
+        order: 3;
+      }
+    }
+
+
     &:nth-child(4) {
       padding-top: 40px;
       margin-bottom: 29px;
       background-color: #f2f2f2;
+
+      @media #{$tablet-only} {
+        order: 1;
+        margin-bottom: 65px;
+        background: none;
+      }
+    }
+
+
+    &:nth-child(5) {
+
+      @media #{$tablet-only} {
+        order: 4;
+        margin-bottom: 62px;
+      }
+    }
+
+
+    &:nth-child(6) {
+
+      @media #{$tablet-only} {
+        order: 5;
+      }
     }
   }
+
+  &__line {
+
+    &--centred {
+      text-align: center;
+
+      @media #{$tablet-only} {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 52px;
+      }
+    }
+
+
+    &--base,
+    &--contacts {
+      display: flex;
+      flex-direction: column;
+
+      @media #{$tablet-only} {
+        flex-direction: row;
+        align-items: baseline;
+        margin-bottom: 55px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--contacts {
+
+      @media #{$tablet-only} {
+        position: relative;
+        flex-direction: column;
+        padding: 0px 40px;
+        margin-bottom: 0;
+
+        &:first-child {
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 40px;
+            width: 61px;
+            height: 61px;
+            background-color: #e5e5e5;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 19px;
+            right: 60px;
+            width: 20px;
+            height: 19px;
+            background-image: url(../../img/decor/icon-phone.svg);
+          }
+        }
+
+        &:last-child {
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 40px;
+            width: 61px;
+            height: 61px;
+            background-color: #e5e5e5;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            right: 60px;
+            width: 18px;
+            height: 13px;
+            background-image: url(../../img/decor/icon-mail.svg);
+          }
+        }
+      }
+    }
+
+
+    &--checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 62px;
+
+      @media #{$tablet-only} {
+        padding-left: 39px;
+      }
+
+    }
+
+
+    &--radio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 55px;
+
+      &:last-child {
+        margin-bottom: 62px;
+      }
+
+      @media #{$tablet-only} {
+        margin-bottom: 56px;
+        padding-left: 39px;
+      }
+
+    }
+  }
+}
+
+//Легенды и филдсеты
+
+.form {
+
+  &__border {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    @media #{$tablet-only} {
+      border: 1px solid rgba(0, 0, 0, .1);
+      margin: inherit;
+      padding: inherit;
+    }
+  }
+}
+
+//Заголовки
+
+.form {
 
   &__title,
   &__title-legend {
@@ -27,6 +208,23 @@
   &__title {
     padding-left: 21px;
     margin-bottom: 15px;
+
+    @media #{$tablet-only} {
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-right: 19px;
+
+      &--contacts {
+        padding-left: 18px;
+        margin-right: 0;
+        margin-bottom: 33px;
+      }
+
+      &--checkbox {
+        padding-left: 60px;
+      }
+    }
+
   }
 
   &__title-legend {
@@ -40,40 +238,45 @@
 
     &--contacts {
       display: none;
+
+      @media #{$tablet-only} {
+        display: block;
+      }
+    }
+
+    &--checkbox {
+      margin-bottom: 47px;
+
+      @media #{$tablet-only} {
+        margin-bottom: 54px;
+      }
+    }
+  }
+
+  .form__border--emotion {
+
+    @media #{$tablet-only} {
+      padding: 20px 60px 50px;
     }
   }
 }
 
+
 //Инпуты
+
 .form {
-
-  &__line {
-
-    &--centred {
-      text-align: center;
-    }
-
-    &--input {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &--button,
-    &--radio {
-      display: flex;
-      align-items: center;
-      margin-bottom: 62px;
-
-    }
-  }
-
 
   &__input {
     padding: 20px;
-    margin-bottom: 23px;
+    margin-bottom: 24px;
     outline: none;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 2px solid rgba(0, 0, 0, .1);
     transition: .4s linear;
+
+    @media #{$tablet-only} {
+      width: 100%;
+      margin-bottom: 0;
+    }
 
     &:hover {
       border-color: #000;
@@ -83,43 +286,57 @@
       border-color: $pink;
     }
 
-    &--patronymic,
-    &--email {
-      margin-bottom: 40px;
-    }
-
     &::placeholder {
       @include font("Open Sans", 18px, 400, normal);
       color: #000;
     }
+
+    &--patronymic {
+      margin-bottom: 42px;
+
+      @media #{$tablet-only} {
+        margin-bottom: 13px;
+      }
+    }
+
+    &--email {
+      margin-bottom: 41px;
+
+      @media #{$tablet-only} {
+        order: -1;
+        margin-bottom: 15px;
+      }
+    }
+
+    &--phone {
+
+      @media #{$tablet-only} {
+        order: -1;
+        margin-bottom: 15px;
+      }
+    }
   }
 }
 
-//Легенды и филдсеты
+
+//Чекбоксы 
+
 .form {
 
-  &__border {
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-//Радио-кнопки и чекбоксы
-.form {
-
-  &__title-checkbox,
-  &__title-radio {
+  &__title-checkbox {
     @include font("Open Sans", 18px, 400, normal);
     color: black;
     cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
-  }
-
-  &__title-checkbox {
     padding-left: 68px;
+
+    @media #{$tablet-only} {
+      padding-left: 60px;
+    }
+
+
 
     &::before {
       content: "";
@@ -149,6 +366,7 @@
     }
   }
 
+
   &__checkbox {
     position: absolute;
     width: 1px;
@@ -172,7 +390,12 @@
   }
 }
 
-  .form__radio {
+
+//Радиокнопки
+
+.form {
+
+  &__radio {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -193,8 +416,18 @@
     }
   }
 
-  .form__title-radio {
+  &__title-radio {
+    @include font("Open Sans", 18px, 400, normal);
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
     padding-left: 70px;
+
+    @media #{$tablet-only} {
+      padding-left: 60px;
+    }
 
     &::before {
       content: "";
@@ -206,23 +439,27 @@
       border-radius: 50%;
       border: 2px solid rgba(0, 0, 0, .1);
       transition: .4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
+      background-color: #fff;
     }
 
     &::after {
       content: "";
       position: absolute;
       top: 3px;
-      left: 13px;
-      width: 14px;
-      height: 14px;
+      left: 12px;
+      width: 15px;
+      height: 15px;
       background-color: $pink;
       border-radius: 50%;
       opacity: 0;
       transition: 0.4s cubic-bezier(0.51, 0.38, 0.67, 0.06);
     }
   }
+}
 
-//Текстария
+
+// Текстэрия
+
 .form {
 
   &__comment {
@@ -231,10 +468,15 @@
     line-height: 30px;
     resize: none;
     line-height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     outline: none;
     transition: .4s linear;
-    margin-bottom: 56px;
+    margin-bottom: 47px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 0;
+    }
+
 
     &::placeholder {
       @extend .form__input::placeholder;
@@ -250,7 +492,9 @@
   }
 }
 
-//Кнопка
+
+//Кнопка отправки
+
 .form {
 
   &__button {
@@ -263,6 +507,12 @@
     margin-bottom: 42px;
     text-align: center;
 
+    @media #{$tablet-only} {
+      margin-right: auto;
+      padding: 21px 57px;
+      margin-bottom: 0;
+    }
+
     &:hover {
       background-color: #1c9b5e;
     }
@@ -274,7 +524,9 @@
   }
 }
 
+
 //Примечание
+
 .form {
 
   &__note {

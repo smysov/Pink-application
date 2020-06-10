@@ -149,10 +149,11 @@
   }
 
   &--form {
+    padding-top: 99px;
 
        @media #{$tablet-only} {
          font-size: 50px;
-         padding-top: 185px;
+         padding-top: 179px;
        }
   }
   

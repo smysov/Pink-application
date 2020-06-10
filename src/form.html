@@ -68,17 +68,17 @@
           <div class="form__inner">
             <div class="form__column">
               <div class="container">
-                <div class="form__line form__line--input">
+                <div class="form__line form__line--base">
                   <label class="form__title" for="surname">Фамилия:</label>
                   <input class="form__input form__input--surname" type="text" id="surname"
                     placeholder="Укажите фамилию*">
                 </div>
-                <div class="form__line form__line--input">
+                <div class="form__line form__line--base">
                   <label class="form__title" for="name">Имя:</label>
                   <input class="form__input form__input--name" type="text" id="name"
                     placeholder="Введите ваше имя*">
                 </div>
-                <div class="form__line form__line--input">
+                <div class="form__line form__line--base">
                   <label class="form__title" for="patronymic">Отчество:</label>
                   <input class="form__input form__input--patronymic" type="text"
                     id="patronymic" placeholder="Ну и отчество тоже">
@@ -93,35 +93,35 @@
                     в
                     путешествии</legend>
                   <div class="form__inner">
-                    <div class="form__line form__line--button">
+                    <div class="form__line form__line--checkbox">
                       <input class="form__checkbox" type="checkbox" id="shark"
                         name="achievement" checked>
                       <label for="shark" class="form__title-checkbox">Сделал селфи с
                         акулой</label>
                     </div>
-                    <div class="form__line form__line--button">
+                    <div class="form__line form__line--checkbox">
                       <input class="form__checkbox" type="checkbox" id="beach"
                         name="achievement" checked>
                       <label class="form__title-checkbox" for="beach">Обгорел на пляже</label>
                     </div>
-                    <div class="form__line form__line--button">
+                    <div class="form__line form__line--checkbox">
                       <input class="form__checkbox" type="checkbox" id="chuck"
                         name="achievement">
                       <label class="form__title-checkbox" for="chuck">Видел Чака
                         Норриса</label>
                     </div>
-                    <div class="form__line form__line--button">
+                    <div class="form__line form__line--checkbox">
                       <input class="form__checkbox" type="checkbox" id="souvenirs"
                         name="achievement">
                       <label class="form__title-checkbox" for="souvenirs">Накупил
                         сувениров</label>
                     </div>
-                    <div class="form__line form__line--button">
+                    <div class="form__line form__line--checkbox">
                       <input class="form__checkbox" type="checkbox" id="tower"
                         name="achievement" checked>
                       <label class="form__title-checkbox" for="tower">Удержал башню</label>
                     </div>
-                    <div class="form__line form__line--button">
+                    <div class="form__line form__line--checkbox">
                       <input class="form__checkbox" type="checkbox" id="hotel"
                         name="achievement">
                       <label class="form__title-checkbox" for="hotel">Разгромил отель</label>
@@ -131,7 +131,6 @@
               </div>
             </div>
 
-
             <div class="form__column">
               <div class="container">
                 <fieldset class="form__border">
@@ -139,13 +138,13 @@
                     информация
                   </legend>
                   <div class="form__inner">
-                    <div class="form__line form__line--input">
-                      <label class="form__title" for="phone">Номер телефона</label>
-                      <input class="form__input form__input--phone" type="text" id="phone"
-                        placeholder="Номер, пожалуйста">
+                    <div class="form__line form__line--contacts">
+                      <label class="form__title form__title--contacts" for="phone">Номер телефона</label>
+                      <input class="form__input form__input--phone" type="tel" id="phone"
+                        placeholder="Номер, пожалуйста*">
                     </div>
-                    <div class="form__line form__line--input">
-                      <label class="form__title" for="email">Адрес почты</label>
+                    <div class="form__line form__line--contacts">
+                      <label class="form__title form__title--contacts" for="email">Адрес почты</label>
                       <input class="form__input form__input--email" type="email" id="email"
                         placeholder="Введите почту*">
                     </div>
@@ -157,7 +156,7 @@
             <div class="form__column">
               <div class="container">
                 <fieldset class="form__border">
-                  <legend class="form__title-legend">С каким приложением
+                  <legend class="form__title-legend form__title-legend--checkbox">С каким приложением
                     путешествовали?</legend>
                   <div class="form__line form__line--radio">
                     <input class="form__radio" type="radio" id="ios" name="application"
@@ -176,10 +175,9 @@
               </div>
             </div>
 
-
             <div class="form__column">
               <div class="container">
-                <fieldset class="form__border">
+                <fieldset class="form__border form__border--emotion">
                   <legend class="form__title-legend form__title-legend--emotion">Опишите свои
                     эмоции
                   </legend>
