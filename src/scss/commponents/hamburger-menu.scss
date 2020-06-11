@@ -9,7 +9,11 @@
   outline: 0;
   display: flex;
   background: 0 0;
-  padding-top: 8px;
+  padding-top: 8px; 
+
+  @media #{$desktop} {
+    display: none;
+  }
 }
 
 //Стили псевдоэлементов

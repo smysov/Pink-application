@@ -26,6 +26,16 @@
     }
   }
 
+  @media #{$desktop} {
+    background-size: 2560px auto;
+    background-image: url(../../img/decor/bg-back-desktop@1x.jpg);
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url(../../img/decor/bg-back-desktop@2x.jpg);
+    }
+  }
+
   &__inner {
     min-height: 729px;
     display: flex;
@@ -55,10 +65,27 @@
         background-image: url(../img/decor/iphone-hand-tablet@2x.png);
       }
     }
+
+    @media #{$desktop} {
+      height: 854px;
+      padding-top: 220px;
+      background-image: url(../img/decor/iphone-hand-desktop@1x.png);
+      background-size: 1050px auto;
+      background-position: 16px bottom;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url(../img/decor/iphone-hand-desktop@2x.png);
+      }
+    }
   }
 
   &--index {
     min-height: 729px;
+
+    @media #{$desktop} {
+      min-height: 854px;
+    }
   }
 
   &--form,
@@ -80,6 +107,10 @@
       padding-left: 31px;
       margin-bottom: 35px;
     }
+
+    @media #{$desktop} {
+      margin-bottom: 57px;
+    }
   }
 
 
@@ -93,40 +124,46 @@
     }
   }
 }
-  
+
 //Стиль кнопки
 
-  .hero__button {
-    margin-bottom: 35px;
+.hero__button {
+  margin-bottom: 35px;
 
-    @media #{$tablet-only} {
-      padding: 13px 45px 15px;
-      margin-bottom: 48px;
-    }
-
-    &:hover {
-      background-color: #fff;
-      color: $pink;
-    }
-
-    &:active {
-      background-color: #fff;
-      color: $pinkHover;
-    }
+  @media #{$tablet-only} {
+    padding: 13px 45px 15px;
+    margin-bottom: 48px;
   }
+
+  @media #{$desktop} {
+    padding: 14px 29px 14px;
+    margin-bottom: 68px;
+    font-size: 21px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $pink;
+  }
+
+  &:active {
+    background-color: #fff;
+    color: $pinkHover;
+  }
+}
 
 //Стили для описания
 
-  .hero__text {
-    @include font("Open Sans", 14px, 300, normal);
-    line-height: 24px;
-    text-align: center;
+.hero__text {
+  @include font("Open Sans", 14px, 300, normal);
+  line-height: 24px;
+  text-align: center;
 
-    @media #{$tablet-only} {
-      font-size: 18px;
-      max-width: 300px;
-    }
+  @media #{$tablet-only} {
+    font-size: 18px;
+    max-width: 300px;
   }
+}
 
 //Стили для заголовков разных страниц
 
@@ -146,17 +183,21 @@
       text-align: center;
       padding-top: 0;
     }
+
+    @media #{$desktop} {
+      font-size: 50px;
+    }
   }
 
   &--form {
     padding-top: 99px;
 
-       @media #{$tablet-only} {
-         font-size: 50px;
-         padding-top: 179px;
-       }
+    @media #{$tablet-only} {
+      font-size: 50px;
+      padding-top: 179px;
+    }
   }
-  
+
   &--photo {
 
     @media #{$tablet-only} {

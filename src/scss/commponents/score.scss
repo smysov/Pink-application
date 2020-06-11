@@ -11,6 +11,10 @@
     padding-left: 11px;
     margin-bottom: 30px;
   }
+
+  @media #{$desktop} {
+    margin-bottom: 50px;
+  }
 }
 
 //Стили иконок

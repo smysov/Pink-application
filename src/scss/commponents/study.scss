@@ -4,4 +4,8 @@
   @media #{$tablet-only} {
     display: block;
   }
+
+  @media #{$desktop} {
+    background-color: #f2f2f2;
+  }
 }

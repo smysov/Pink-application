@@ -11,6 +11,11 @@
 
   @media #{$tablet-only} {
     min-height: 104px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  @media #{$desktop} {
+    min-height: 110px;
   }
 
   &--background {
@@ -25,6 +30,12 @@
 
     @media #{$tablet-only} {
       padding: 21px 0;
+    }
+
+    @media #{$desktop} {
+      justify-content: inherit;
+      align-items: inherit;
+      padding: 0;
     }
   }
 }

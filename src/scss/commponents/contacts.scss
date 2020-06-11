@@ -14,6 +14,13 @@
       margin-bottom: 47px;
     }
 
+    @media #{$desktop} {
+      font-size: 50px;
+      padding-top: 105px;
+      flex-flow: row nowrap;
+      margin-bottom: 60px;
+    }
+
     br {
       display: none;
 

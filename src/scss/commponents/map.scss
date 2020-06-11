@@ -7,6 +7,10 @@
     height: 375px;
   }
 
+  @media #{$desktop} {
+    height: 500px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -24,6 +28,10 @@
 
     @media #{$tablet-only} {
       height: 70px;
+    }
+
+    @media #{$desktop} {
+      height: 100px;
     }
   }
 }

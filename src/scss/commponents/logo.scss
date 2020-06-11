@@ -1,4 +1,18 @@
 //Стили для логотипов
+.logo {
+
+  @media #{$desktop} {
+    padding: 25px 0;
+    margin-right: 171px;
+
+    &--footer {
+      padding: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+
 
 .logo__icon {
   transition: .3s ease;
@@ -8,7 +22,7 @@
     width: 74px;
     height: 24px;
     fill: #fff;
-    
+
     @media #{$tablet-only} {
       display: none;
     }
@@ -21,6 +35,21 @@
     fill: #fff;
 
     @media #{$tablet-only} {
+      display: block;
+    }
+
+    @media #{$desktop} {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    width: 147px;
+    height: 40px;
+    fill: #fff;
+
+    @media #{$desktop} {
       display: block;
     }
   }
@@ -39,5 +68,20 @@
     width: 147px;
     height: 40px;
     fill: #000;
+
+    @media #{$desktop} {
+      display: none;
+    }
+  }
+
+  &--footer-d {
+    display: none;
+    width: 147px;
+    height: 40px;
+    fill: #000;
+
+    @media #{$desktop} {
+      display: block;
+    }
   }
 }

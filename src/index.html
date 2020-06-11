@@ -22,6 +22,9 @@
             <svg class="logo__icon logo__icon--tablet">
               <use xlink:href="img/icons/sprite.svg#logo-pink-blue-mobile"></use>
             </svg>
+            <svg class="logo__icon logo__icon--desktop">
+              <use xlink:href="img/icons/sprite.svg#logo-pink-white-desktop"></use>
+            </svg>
           </a>
           <nav class="main-navigation">
             <ul class="main-navigation__list site-list">
@@ -36,7 +39,7 @@
               </li>
               <li class="site-list__item">
                 <a class="site-list__link" href="https://htmlacademy.ru/study"
-                  target="_blank">Html academy</a>
+                  target="_blank">HTML Academy</a>
               </li>
             </ul>
           </nav>
@@ -101,23 +104,25 @@
         </div>
 
         <ul class="advantages-list">
-          <li class="advantages-list__item advantages-list__item--smile">
-            <h4 class="advantages-list__title">Поднимает настроение</h4>
-            <p class="advantages-list__description">Приложение позволит вам победить осеннюю
-              хандру и депрессию
-              буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages-list__item advantages-list__item--world">
-            <h4 class="advantages-list__title">Меняет мир вокруг</h4>
-            <p class="advantages-list__description">Сделайте снимок и украсьте его смайликом
-              или
-              текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages-list__item advantages-list__item--friends">
-            <h4 class="advantages-list__title">Заводит новых друзей</h4>
-            <p class="advantages-list__description">Ставьте лайки, комментируйте, делитесь
-              фотографиями с друзьями и заводите новых</p>
-          </li>
+          <div class="container">
+            <li class="advantages-list__item advantages-list__item--smile">
+              <h4 class="advantages-list__title">Поднимает настроение</h4>
+              <p class="advantages-list__description">Приложение позволит вам победить осеннюю
+                хандру и депрессию
+                буквально в несколько кликов!</p>
+            </li>
+            <li class="advantages-list__item advantages-list__item--world">
+              <h4 class="advantages-list__title">Меняет мир вокруг</h4>
+              <p class="advantages-list__description">Сделайте снимок и украсьте его смайликом
+                или
+                текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="advantages-list__item advantages-list__item--friends">
+              <h4 class="advantages-list__title">Заводит новых друзей</h4>
+              <p class="advantages-list__description">Ставьте лайки, комментируйте, делитесь
+                фотографиями с друзьями и заводите новых</p>
+            </li>
+          </div>
         </ul>
       </section>
 
@@ -173,9 +178,9 @@
               <div class="rewievs__name">Николай Петров</div>
               <div class="rewievs__about">25 лет, водитель трамвая</div>
             </li>
+            <button class="rewievs__prev" type="button"></button>
+            <button class="rewievs__next" type="button"></button>
           </ul>
-          <button class="rewievs__prev" type="button">Предыдущий отзыв</button>
-          <button class="rewievs__next" type="button">Следующий отзыв</button>
           <ul class="rewievs__toggles slider__toggles">
             <li class="slider__toggle">
               <button class="slider__button slider__button--active" type="button"></button>
@@ -285,30 +290,34 @@
     <footer class="footer footer--index">
       <div class="container">
         <div class="footer__inner">
-          <a class="footer__logo logo" href="index.html">
+          <a class="footer__logo logo logo--footer" href="index.html">
             <svg class="logo__icon logo__icon--footer">
               <use xlink:href="../../img/icons/sprite.svg#logo-pink-blue-mobile"></use>
+            </svg>
+            <svg class="logo__icon logo__icon--footer-d">
+              <use xlink:href="img/icons/sprite.svg#logo-pink-white-desktop"></use>
             </svg>
           </a>
           <ul class="footer__socials socials">
             <li class="socials__item">
-              <a class="socials__link" href="https://twitter.com/explore">
+              <a class="socials__link" href="https://twitter.com/explore" target="_blank">
                 <svg class="socials__icon socials__icon--twitter">
-                  <use xlink:href="../../img/icons/sprite.svg#twitter" target="_blank"></use>
+                  <use xlink:href="../../img/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="https://ru-ru.facebook.com/">
+              <a class="socials__link" href="https://ru-ru.facebook.com/" target="_blank">
                 <svg class="socials__icon socials__icon--facebook">
-                  <use xlink:href="../../img/icons/sprite.svg#facebook" target="_blank"></use>
+                  <use xlink:href="../../img/icons/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="https://www.youtube.com/?gl=RU&hl=ru">
+              <a class="socials__link" href="https://www.youtube.com/?gl=RU&hl=ru"
+                target="_blank">
                 <svg class="socials__icon socials__icon--youtube">
-                  <use xlink:href="../../img/icons/sprite.svg#youtube" target="_blank"></use>
+                  <use xlink:href="../../img/icons/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>

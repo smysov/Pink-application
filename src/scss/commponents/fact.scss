@@ -4,12 +4,22 @@
   padding-left: 310px;
   margin-bottom: 85px;
 
+  @media #{$desktop} {
+    padding-left: 365px;
+    padding-bottom: 85px;
+    margin-bottom: 0;
+  }
+
   &__title {
     position: relative;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     margin-bottom: 9px;
+
+    @media #{$desktop} {
+      margin-bottom: 22px;
+    }
 
     &::before {
       content: "";
@@ -19,6 +29,16 @@
       left: -308px;
       top: -34px;
       background: url(../../img/decor/icon-timer.svg) no-repeat;
+
+      @media #{$desktop} {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 345px;
+        left: -363px;
+        top: -94px;
+        background: url(../../img/decor/icon-timer.svg) no-repeat;
+      }
     }
 
     &::after {
@@ -35,6 +55,30 @@
       border: 14px solid #d22856;
       border-radius: 50%;
       padding: 64px 34px 76px 32px;
+
+      @media #{$desktop} {
+        content: "24";
+        position: absolute;
+        font-family: "Open Sans",
+          Arial,
+          sans-serif;
+        font-size: 120px;
+        font-weight: 700;
+        color: #d22856;
+        top: -24px;
+        left: -342px;
+        border: 16px solid #d22856;
+        border-radius: 50%;
+        padding: 86px 42px 100px 44px;
+
+      }
+    }
+
+    br {
+
+      @media #{$desktop} {
+        display: none;
+      }
     }
   }
 
@@ -44,6 +88,12 @@
     line-height: 24px;
     color: $blue;
     margin-bottom: 11px;
+
+    @media #{$desktop} {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 28px;
+    }
   }
 
   &__link {
@@ -52,5 +102,11 @@
     line-height: 24px;
     color: $pink;
     text-decoration: underline;
+
+    @media #{$desktop} {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 28px;
+    }
   }
 }
