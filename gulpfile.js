@@ -75,10 +75,21 @@ task("styles", () => {
   );
 });
 
-task("scripts", () => {
-  return src(`${SRC_PATH}/scripts/*js`)
+task("scripts:modules", () => {
+  return src(`${SRC_PATH}/scripts/modules/*js`)
     .pipe(gulpif(env === "dev", sourcemaps.init()))
     .pipe(concat("main.min.js", { newLine: ";" }))
+    .pipe(gulpif(env === "prod", babel({ presets: ["@babel/env"] })))
+    .pipe(gulpif(env === "prod", uglify()))
+    .pipe(gulpif(env === "dev", sourcemaps.write()))
+    .pipe(dest(`${DIST_PATH}/js`))
+    .pipe(reload({ stream: true }));
+});
+
+task("scripts:vendors", () => {
+  return src(`${SRC_PATH}/scripts/vendors/*js`)
+    .pipe(gulpif(env === "dev", sourcemaps.init()))
+    // .pipe(concat("main.min.js", { newLine: ";" }))
     .pipe(gulpif(env === "prod", babel({ presets: ["@babel/env"] })))
     .pipe(gulpif(env === "prod", uglify()))
     .pipe(gulpif(env === "dev", sourcemaps.write()))
@@ -121,7 +132,7 @@ task("server", () => {
 task("watch", () => {
   watch(`./${SRC_PATH}/scss/**/*.scss`, series("styles"));
   watch(`./${SRC_PATH}/*.html`, series("copy:html"));
-  watch(`./${SRC_PATH}/scripts/*.js`, series("scripts"));
+  watch(`./${SRC_PATH}/scripts/*.js`, series("scripts:modules"));
 });
 
 task(
@@ -134,7 +145,8 @@ task(
       "copy:decor",
       "icons",
       "styles",
-      "scripts",
+      "scripts:modules",
+      "scripts:vendors",
       "fonts"
     ),
     parallel("watch", "server")
@@ -151,7 +163,8 @@ task(
       "copy:decor",
       "icons",
       "styles",
-      "scripts",
+      "scripts:modules",
+      "scripts:vendors",
       "fonts"
     )
   )

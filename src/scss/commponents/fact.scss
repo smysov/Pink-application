@@ -89,6 +89,14 @@
     color: $blue;
     margin-bottom: 11px;
 
+    @media (min-width: 750px) and (max-width: 959px) {
+      font-size: 16px;
+    }
+
+    @media (min-width: 800px) and (max-width: 959px) {
+      padding-right: 20px;
+    }
+
     @media #{$desktop} {
       font-size: 18px;
       line-height: 30px;

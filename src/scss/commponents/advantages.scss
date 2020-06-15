@@ -63,6 +63,7 @@
       }
     }
 
+
     @media #{$tablet-only} {
       min-height: 486px;
       padding-top: 98px;
@@ -81,12 +82,12 @@
     }
 
     @media #{$desktop} {
-    display: flex;
-    background: url(../../img/decor/bg-triangle-white.svg) 100% 0%/contain no-repeat;
-    background-color: #f2f2f2;
-    padding: 0;
-    padding-bottom: 116px;
-    margin-bottom: 0;
+      display: flex;
+      background: url(../../img/decor/bg-triangle-white.svg) 100% 0%/contain no-repeat;
+      background-color: #f2f2f2;
+      padding: 0;
+      padding-bottom: 116px;
+      margin-bottom: 0;
 
       &>.container {
         display: flex;
@@ -102,8 +103,23 @@
     padding: 0 20px;
     margin-bottom: 42px;
 
+    @media (min-width: 500px) and (max-width: 659px) {
+      padding: 0 40px;
+    }
+
     @media #{$tablet-only} {
       text-align: left;
+      padding-left: 0;
+      padding-right: 25px;
+    }
+
+    @media (min-width: 770px) and (max-width: 835px) {
+      padding-right: 60px;
+    }
+
+    @media (min-width: 835px) and (max-width: 959px) {
+      padding-left: 15px;
+      padding-right: 100px;
     }
 
     &:nth-child(3) {
@@ -152,31 +168,43 @@
     }
 
 
-      //Заголовки и подзаколовки списка приемуществ
+    //Заголовки и подзаколовки списка приемуществ
 
-      .advantages-list__title {
-        @include font ("Open Sans", 18px, 700, normal);
-        line-height: 10px;
-        margin-bottom: 15px;
+    .advantages-list__title {
+      @include font ("Open Sans", 18px, 700, normal);
+      line-height: 10px;
+      margin-bottom: 15px;
 
-        @media #{$tablet-only} {
-          margin-bottom: 19px;
-        }
-
-        @media #{$desktop} {
-          font-size: 30px;
-          line-height: 30px;
-          margin-bottom: 25px;
-        }
+      @media (min-width: 450px) and (max-width: 659px) {
+        font-size: 19px;
       }
 
-      .advantages-list__description {
-        @include font ("Open Sans", 14px, 400, normal);
-        line-height: 24px;
+      @media #{$tablet-only} {
+        margin-bottom: 20px;
+      }
 
-        @media #{$desktop} {
-          font-size: 18px;
-          line-height: 30px;
-        }
+      @media #{$desktop} {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 25px;
       }
     }
+
+    .advantages-list__description {
+      @include font ("Open Sans", 14px, 400, normal);
+      line-height: 24px;
+
+      @media (min-width: 450px) and (max-width: 659px) {
+        font-size: 16px;
+      }
+
+      @media #{$tablet-only} {
+        font-size: 17px;
+      }
+
+      @media #{$desktop} {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }

@@ -13,6 +13,10 @@
   &__text {
     @include font("Open Sans", 14px, 400, normal);
     margin-right: 16px;
+
+    @media #{$desktop} {
+      font-size: 18px;
+    }
   }
 
   &__logo {

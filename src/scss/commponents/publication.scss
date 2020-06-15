@@ -14,6 +14,10 @@
       padding: 0 145px;
       margin-bottom: 107px;
     }
+
+    @media #{$desktop} {
+      margin-bottom: 70px;
+    }
   }
 
   &__inner {
@@ -23,9 +27,17 @@
 
     @media #{$tablet-only} {
       padding-bottom: 0;
+
       &>.container {
         display: flex;
       }
+    }
+
+    @media #{$desktop} {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 54px 10px 57px;
+      margin-bottom: 19px;
     }
   }
 
@@ -34,6 +46,10 @@
     @media #{$tablet-only} {
       padding-top: 6px;
     }
+
+    @media #{$desktop} {
+      padding-top: 0;
+    }
   }
 
   &__photo {
@@ -41,6 +57,12 @@
 
     @media #{$tablet-only} {
       flex-shrink: 0;
+    }
+
+    @media #{$desktop} {
+      padding-left: 70px;
+      margin-right: 45px;
+      margin-bottom: 0;
     }
   }
 
@@ -53,6 +75,10 @@
       flex-direction: row;
       margin-left: 47px;
       margin-bottom: 34px;
+    }
+
+    @media #{$desktop} {
+      margin-bottom: 126px;
     }
   }
 
@@ -74,6 +100,10 @@
         display: block;
       }
     }
+
+    @media #{$desktop} {
+      padding-top: 10px;
+    }
   }
 
   &__filter {
@@ -87,6 +117,7 @@
       flex-grow: 1;
       margin-bottom: 0;
     }
+
   }
 
   &__icons {
@@ -112,6 +143,11 @@
       height: 24px;
     }
 
+    @media #{$desktop} {
+      width: 44px;
+      height: 44px;
+    }
+
     &:hover {
       fill: $pinkHover;
     }
@@ -126,6 +162,12 @@
   @media #{$tablet-only} {
     padding-left: 48px;
     padding-right: 13px;
+  }
+
+  @media #{$desktop} {
+    display: flex;
+    padding-left: 44px;
+    padding-right: 0;
   }
 }
 
@@ -152,6 +194,12 @@
   @media #{$tablet-only} {
     margin-bottom: 27px;
   }
+
+  @media #{$desktop} {
+    margin-bottom: 0;
+    padding: 16px 38px 15px 42px;
+    margin-right: 43px;
+  } 
 }
 
 //Стили для кнопки сброса
@@ -162,6 +210,10 @@
   border-color: rgba(0, 0, 0, .1);
   background-color: #fff;
   transition: .5s linear;
+
+  @media #{$desktop} {
+    padding: 12px 53px 15px;
+  }
 
   &:hover {
     color: rgba(0, 0, 0, .3);
@@ -184,6 +236,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  @media #{$desktop} {
+    height: 1px;
+  }
 
   &::-webkit-slider-thumb {
     appearance: none;
@@ -228,5 +284,9 @@
 
   @media #{$tablet-only} {
     margin-bottom: 47px;
+  }
+
+  @media #{$desktop} {
+    margin-bottom: 24px;
   }
 }

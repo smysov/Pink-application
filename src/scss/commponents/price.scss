@@ -22,7 +22,7 @@
       padding-top: 98px;
 
       @media #{$tablet-only} {
-        padding-top: 81px;
+        padding-top: 86px;
       }
 
       @media #{$desktop} {
@@ -164,6 +164,8 @@
   &::after {
     content: "хит";
     position: absolute;
+    top: 12px;
+    left: 10px;
     font-family: "Myriad Pro";
     font-size: 14px;
     line-height: 30px;

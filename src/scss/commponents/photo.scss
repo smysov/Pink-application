@@ -7,57 +7,81 @@
     margin-bottom: 49px;
   }
 
-    &--day {
-      margin-bottom: 28px;
+  &--day {
+    margin-bottom: 28px;
+  }
+
+  @media #{$tablet-only} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: #f2f2f2;
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     @media #{$tablet-only} {
-      display: flex;
-      flex-wrap: wrap;
-    }
+      width: calc(100% / 2 - 10px);
+      margin-right: 20px;
 
-    &__item {
-      background-color: #f2f2f2;
-      margin-bottom: 28px;
+      &:nth-child(2n) {
+        margin-right: 0;
 
-      &:last-child {
+        @media #{$desktop} {
+          margin-right: 20px;
+        }
+      }
+
+      &:last-child,
+      &:nth-child(5) {
         margin-bottom: 0;
       }
+    }
 
-      @media #{$tablet-only} {
-        width: calc(100% / 2 - 10px);
-        margin-right: 20px;
+    &:nth-child(4) {
 
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-
-        &:last-child,
-        &:nth-child(5) {
-          margin-bottom: 0;
-        }
+      @media #{$desktop} {
+        margin-bottom: 0;
       }
     }
 
-    &__image {
+    &:nth-child(3n) {
 
-
-      &--day {
-        position: relative;
-        width: 100%;
+      @media #{$desktop} {
+        margin-right: 0;
       }
     }
 
-
-    &__picture {
-      vertical-align: middle;
-
+    @media #{$desktop} {
+      width: calc(100% / 3 - 13px);
+      margin-right: 19px;
+      margin-bottom: 62px;
     }
+  }
 
-    &__author {
-      @include font("Open Sans", 14px, 700, normal);
-      line-height: 24px;
+  &__image {
+
+
+    &--day {
+      position: relative;
+      width: 100%;
     }
+  }
+
+
+  &__picture {
+    vertical-align: middle;
+
+  }
+
+  &__author {
+    @include font("Open Sans", 14px, 700, normal);
+    line-height: 24px;
+  }
 }
 
 //Комментарий пользователя
@@ -67,10 +91,20 @@
   line-height: 30px;
   text-align: center;
 
+  @media (min-width: 520px) and (max-width: 659px) {
+    padding: 0 30px;
+    font-size: 15px;
+  }
+
   @media #{$tablet-only} {
     font-size: 18px;
     padding: 93px 25px 0;
     margin-bottom: 76px;
+  }
+
+  @media #{$desktop} {
+    padding: 50px 157px 0;
+    margin-bottom: 88px;
   }
 }
 
@@ -88,6 +122,11 @@
 
   @media #{$tablet-only} {
     top: 57px;
+  }
+
+  @media #{$desktop} {
+    top: 55px;
+    right: 129px;
   }
 }
 
@@ -122,6 +161,11 @@
       justify-content: space-between;
       padding: 22px 27px;
       margin-bottom: 40px;
+    }
+
+    @media #{$desktop} {
+      padding: 22px 27px 10px;
+      margin-bottom: 51px;
     }
   }
 }

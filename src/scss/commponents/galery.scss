@@ -4,4 +4,8 @@
   @media #{$tablet-only} {
     margin-bottom: 100px;
   }
+
+  @media #{$desktop} {
+    margin-bottom: 93px;
+  }
 }

@@ -95,6 +95,10 @@
     @media #{$tablet-only} {
       min-height: 435px;
     }
+
+    @media #{$desktop} {
+      min-height: 393px;
+    }
   }
 
   &__inner-title {
@@ -159,6 +163,10 @@
   line-height: 24px;
   text-align: center;
 
+  @media (min-width: 450px) and (max-width: 659px) {
+    font-size: 16px;
+  }
+
   @media #{$tablet-only} {
     font-size: 18px;
     max-width: 300px;
@@ -192,6 +200,10 @@
   &--form {
     padding-top: 99px;
 
+    @media (min-width: 550px) and (max-width: 659px) {
+      padding: 99px 30px 0;
+    }
+
     @media #{$tablet-only} {
       font-size: 50px;
       padding-top: 179px;
@@ -203,6 +215,10 @@
     @media #{$tablet-only} {
       font-size: 50px;
       padding-top: 178px;
+    }
+
+    @media #{$desktop} {
+      padding: 177px 141px 0;
     }
   }
 }

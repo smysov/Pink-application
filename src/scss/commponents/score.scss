@@ -15,12 +15,16 @@
   @media #{$desktop} {
     margin-bottom: 50px;
   }
+
+  @media (min-width: 450px) and (max-width: 659px) {
+    justify-content: space-between;
+  }
 }
 
 //Стили иконок
 
 .score-list__image {
-transition: .3s linear;
+  transition: .3s linear;
 
   &--apple {
     width: 47px;
