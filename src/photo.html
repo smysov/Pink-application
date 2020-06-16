@@ -13,7 +13,7 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a href="index.html" class="header__logo logo">
+          <a href="index.html" class="header__logo logo" title="Лооготип сайта">
             <svg class="logo__icon logo__icon--mobile">
               <use xlink:href="img/icons/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
@@ -30,18 +30,19 @@
                 <a class="site-list__link" href="index.html">Главная</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--active" href="photo.html">Фотографии</a>
+                <a class="site-list__link site-list__link--active"
+                  href="photo.html">Фотографии</a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__link" href="form.html">Конкурс</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="https://htmlacademy.ru/study" target="_blank">HTML
-                  Academy</a>
+                <a class="site-list__link" href="https://htmlacademy.ru/study" target="_blank"
+                  rel="noopener">HTML Academy</a>
               </li>
             </ul>
           </nav>
-          <button class="hamburger-menu" type="button">
+          <button class="hamburger-menu" type="button" aria-label="Мобильное меню">
             <span class="hamburger-menu__icon hamburger-menu__icon--burger"></span>
           </button>
         </div>
@@ -70,9 +71,12 @@
 
           <div class="photo__image photo__image--day">
             <picture>
-              <source type="image/webp" srcset="./img/content/panorama-desktop@1x.webp 1x, ./img/content/panorama-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="./img/content/panorama-tablet@1x.webp 1x, ./img/content/panorama-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="./img/content/panorama-mobile@1x.webp 1x, ./img/content/panorama-mobile@2x.webp 2x">
+              <source media="(min-width: 960px)" type="image/webp"
+                srcset="./img/content/panorama-desktop@1x.webp 1x, ./img/content/panorama-desktop@2x.webp 2x">
+              <source media="(min-width: 660px)" type="image/webp"
+                srcset="./img/content/panorama-tablet@1x.webp 1x, ./img/content/panorama-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="./img/content/panorama-mobile@1x.webp 1x, ./img/content/panorama-mobile@2x.webp 2x">
               <source media="(min-width: 960px)"
                 srcset="./img/content/panorama-desktop@1x.jpg 1x, ./img/content/panorama-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)"
@@ -92,7 +96,8 @@
               <div class="photo__likes photo__likes--day">
                 <div class="photo__quantity photo__quantity--day">нравится:<span
                     class="photo__amount">215</span></div>
-                <button class="photo__like photo__like--day" type="button">
+                <button class="photo__like photo__like--day" type="button"
+                  aria-label="Поставить лайк">
                 </button>
               </div>
               <p class="photo__comment photo__comment--day">Прыгать или нет?
@@ -114,9 +119,12 @@
             <li class="photo__item">
               <div class="photo__image">
                 <picture>
-                  <source type="image/webp" srcset="./img/content/photo-car-desktop@1x.webp 1x, ./img/content/photo-car-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-car-tablet@1x.webp 1x, ./img/content/photo-car-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-car-mobile@1x.webp 1x, ./img/content/photo-car-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" type="image/webp"
+                    srcset="./img/content/photo-car-desktop@1x.webp 1x, ./img/content/photo-car-desktop@2x.webp 2x">
+                  <source media="(min-width: 660px)" type="image/webp"
+                    srcset="./img/content/photo-car-tablet@1x.webp 1x, ./img/content/photo-car-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/content/photo-car-mobile@1x.webp 1x, ./img/content/photo-car-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)"
                     srcset="./img/content/photo-car-desktop@1x.jpg 1x, ./img/content/photo-car-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)"
@@ -135,7 +143,7 @@
                 <div class="photo__likes">
                   <div class="photo__quantity">нравится:<span class="photo__amount">356</span>
                   </div>
-                  <button class="photo__like" type="button">
+                  <button class="photo__like" type="button" aria-label="Поставить лайк">
                   </button>
                 </div>
               </div>
@@ -143,9 +151,12 @@
             <li class="photo__item">
               <div class="photo__image">
                 <picture>
-                  <source type="image/webp" srcset="./img/content/photo-drumset-desktop@1x.webp 1x, ./img/content/photo-drumset-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-drumset-tablet@1x.webp 1x, ./img/content/photo-drumset-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-drumset-mobile@1x.webp 1x, ./img/content/photo-drumset-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" type="image/webp"
+                    srcset="./img/content/photo-drumset-desktop@1x.webp 1x, ./img/content/photo-drumset-desktop@2x.webp 2x">
+                  <source media="(min-width: 660px)" type="image/webp"
+                    srcset="./img/content/photo-drumset-tablet@1x.webp 1x, ./img/content/photo-drumset-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/content/photo-drumset-mobile@1x.webp 1x, ./img/content/photo-drumset-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)"
                     srcset="./img/content/photo-drumset-desktop@1x.jpg 1x, ./img/content/photo-drumset-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)"
@@ -163,7 +174,7 @@
                 <div class="photo__likes">
                   <div class="photo__quantity">нравится:<span class="photo__amount">666</span>
                   </div>
-                  <button class="photo__like" type="button">
+                  <button class="photo__like" type="button" aria-label="Поставить лайк">
                   </button>
                 </div>
               </div>
@@ -171,9 +182,12 @@
             <li class="photo__item">
               <div class="photo__image">
                 <picture>
-                  <source type="image/webp" srcset="./img/content/photo-window-desktop@1x.webp 1x, ./img/content/photo-window-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-window-tablet@1x.webp 1x, ./img/content/photo-window-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-window-mobile@1x.webp 1x, ./img/content/photo-window-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" type="image/webp"
+                    srcset="./img/content/photo-window-desktop@1x.webp 1x, ./img/content/photo-window-desktop@2x.webp 2x">
+                  <source media="(min-width: 660px)" type="image/webp"
+                    srcset="./img/content/photo-window-tablet@1x.webp 1x, ./img/content/photo-window-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/content/photo-window-mobile@1x.webp 1x, ./img/content/photo-window-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)"
                     srcset="./img/content/photo-window-desktop@1x.jpg 1x, ./img/content/photo-window-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)"
@@ -191,7 +205,7 @@
                 <div class="photo__likes">
                   <div class="photo__quantity">нравится:<span class="photo__amount">215</span>
                   </div>
-                  <button class="photo__like" type="button">
+                  <button class="photo__like" type="button" aria-label="Поставить лайк">
                   </button>
                 </div>
               </div>
@@ -199,9 +213,12 @@
             <li class="photo__item">
               <div class="photo__image">
                 <picture>
-                  <source type="image/webp" srcset="./img/content/photo-fair-desktop@1x.webp 1x, ./img/content/photo-fair-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-fair-tablet@1x.webp 1x, ./img/content/photo-fair-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-fair-mobile@1x.webp 1x, ./img/content/photo-fair-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" type="image/webp"
+                    srcset="./img/content/photo-fair-desktop@1x.webp 1x, ./img/content/photo-fair-desktop@2x.webp 2x">
+                  <source media="(min-width: 660px)" type="image/webp"
+                    srcset="./img/content/photo-fair-tablet@1x.webp 1x, ./img/content/photo-fair-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/content/photo-fair-mobile@1x.webp 1x, ./img/content/photo-fair-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)"
                     srcset="./img/content/photo-fair-desktop@1x.jpg 1x, ./img/content/photo-fair-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)"
@@ -219,7 +236,7 @@
                 <div class="photo__likes">
                   <div class="photo__quantity">нравится:<span class="photo__amount">4</span>
                   </div>
-                  <button class="photo__like" type="button">
+                  <button class="photo__like" type="button" aria-label="Поставить лайк">
                   </button>
                 </div>
               </div>
@@ -227,9 +244,12 @@
             <li class="photo__item">
               <div class="photo__image">
                 <picture>
-                  <source type="image/webp" srcset="./img/content/photo-pov-desktop@1x.webp 1x, ./img/content/photo-pov-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-pov-tablet@1x.webp 1x, ./img/content/photo-pov-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-pov-mobile@1x.webp 1x, ./img/content/photo-pov-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" type="image/webp"
+                    srcset="./img/content/photo-pov-desktop@1x.webp 1x, ./img/content/photo-pov-desktop@2x.webp 2x">
+                  <source media="(min-width: 660px)" type="image/webp"
+                    srcset="./img/content/photo-pov-tablet@1x.webp 1x, ./img/content/photo-pov-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/content/photo-pov-mobile@1x.webp 1x, ./img/content/photo-pov-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)"
                     srcset="./img/content/photo-pov-desktop@1x.jpg 1x, ./img/content/photo-pov-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)"
@@ -247,7 +267,7 @@
                 <div class="photo__likes">
                   <div class="photo__quantity">нравится:<span class="photo__amount">150</span>
                   </div>
-                  <button class="photo__like" type="button">
+                  <button class="photo__like" type="button" aria-label="Поставить лайк">
                   </button>
                 </div>
               </div>
@@ -255,9 +275,12 @@
             <li class="photo__item">
               <div class="photo__image">
                 <picture>
-                  <source type="image/webp" srcset="./img/content/photo-wing-desktop@1x.webp 1x, ./img/content/photo-wing-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-wing-tablet@1x.webp 1x, ./img/content/photo-wing-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/content/photo-wing-mobile@1x.webp 1x, ./img/content/photo-wing-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" type="image/webp"
+                    srcset="./img/content/photo-wing-desktop@1x.webp 1x, ./img/content/photo-wing-desktop@2x.webp 2x">
+                  <source media="(min-width: 660px)" type="image/webp"
+                    srcset="./img/content/photo-wing-tablet@1x.webp 1x, ./img/content/photo-wing-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/content/photo-wing-mobile@1x.webp 1x, ./img/content/photo-wing-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)"
                     srcset="./img/content/photo-wing-desktop@1x.jpg 1x, ./img/content/photo-wing-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)"
@@ -275,7 +298,7 @@
                 <div class="photo__likes">
                   <div class="photo__quantity">нравится:<span class="photo__amount">2560</span>
                   </div>
-                  <button class="photo__like" type="button">
+                  <button class="photo__like" type="button" aria-label="Поставить лайк">
                   </button>
                 </div>
               </div>
@@ -295,9 +318,12 @@
 
             <div class="publication__photo">
               <picture>
-                <source type="image/webp" srcset="./img/content/photo-road-desktop@1x.webp 1x, ./img/content/photo-road-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="./img/content/photo-road-tablet@1x.webp 1x, ./img/content/photo-road-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="./img/content/photo-road-mobile@1x.webp 1x, ./img/content/photo-road-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="./img/content/photo-road-desktop@1x.webp 1x, ./img/content/photo-road-desktop@2x.webp 2x">
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="./img/content/photo-road-tablet@1x.webp 1x, ./img/content/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/content/photo-road-mobile@1x.webp 1x, ./img/content/photo-road-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)"
                   srcset="./img/content/photo-road-desktop@1x.jpg 1x, ./img/content/photo-road-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)"
@@ -346,10 +372,10 @@
 
                 </div>
                 <div class="publication__buttons">
-                  <button class="publication__send button button--send"
-                    type="submit">Запостить</button>
-                  <button class="publication__reset button button--reset"
-                    type="reset">Отмена</button>
+                  <button class="publication__send button button--send" type="submit"
+                    aria-label="Опубликовать фото">Запостить</button>
+                  <button class="publication__reset button button--reset" type="reset"
+                    aria-label="Сбросить всё">Отмена</button>
                 </div>
               </div>
             </form>
@@ -362,7 +388,7 @@
     <footer class="footer footer--photo">
       <div class="container">
         <div class="footer__inner">
-          <a class="footer__logo logo logo--footer" href="index.html">
+          <a class="footer__logo logo logo--footer" href="index.html" title="Логотип сайта">
             <svg class="logo__icon logo__icon--footer">
               <use xlink:href="../../img/icons/sprite.svg#logo-pink-blue-mobile"></use>
             </svg>
@@ -372,21 +398,24 @@
           </a>
           <ul class="footer__socials socials">
             <li class="socials__item">
-              <a class="socials__link" href="https://twitter.com/explore" target="_blank">
+              <a class="socials__link" href="https://twitter.com/explore" target="_blank"
+                rel="noopener" title="Логотип сайта">
                 <svg class="socials__icon socials__icon--twitter">
                   <use xlink:href="../../img/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="https://ru-ru.facebook.com/" target="_blank">
+              <a class="socials__link" href="https://ru-ru.facebook.com/" target="_blank"
+                rel="noopener" title="Логотип сайта Facebook">
                 <svg class="socials__icon socials__icon--facebook">
                   <use xlink:href="../../img/icons/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="https://www.youtube.com/?gl=RU&hl=ru" target="_blank">
+              <a class="socials__link" href="https://www.youtube.com/?gl=RU&hl=ru"
+                target="_blank" rel="noopener" title="Логотип сайта Youtube">
                 <svg class="socials__icon socials__icon--youtube">
                   <use xlink:href="../../img/icons/sprite.svg#youtube"></use>
                 </svg>
@@ -395,7 +424,8 @@
           </ul>
           <div class="footer__copyright copyright">
             <span class="copyright__text">Разработано</span>
-            <a class="copyright__link" href="https://htmlacademy.ru/study" target="_blank">
+            <a class="copyright__link" href="https://htmlacademy.ru/study" target="_blank"
+              rel="noopener" title="Логотип сайта HTML Academy">
               <svg class="copyright__logo">
                 <use xlink:href="../../img/icons/sprite.svg#logo-htmlacademy"></use>
               </svg>

@@ -8,7 +8,6 @@ const sassGlob = require("gulp-sass-glob");
 const autoprefixer = require("gulp-autoprefixer");
 const px2rem = require("gulp-smile-px2rem");
 const gcmq = require("gulp-group-css-media-queries");
-const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
@@ -18,6 +17,7 @@ const gulpif = require("gulp-if");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const htmlmin = require("gulp-htmlmin");
+const csso = require("gulp-csso");
 
 const env = process.env.NODE_ENV;
 
@@ -35,7 +35,7 @@ task("clean", () => {
 
 task("copy:html", () => {
   return src(`${SRC_PATH}/*.html`)
-    .pipe(htmlmin(env === "prod", { collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
@@ -82,7 +82,7 @@ task("images:decor", () => {
   return src(`${SRC_PATH}/images/decor/*.{png,jpg,svg}`)
     .pipe(
       imagemin([
-        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.mozjpeg({ progressive: true }),
         imagemin.svgo(),
       ])
@@ -104,7 +104,7 @@ task("styles", () => {
   return (
     src([...STYLE_LIBS, `${SRC_PATH}/scss/main.scss`])
       .pipe(gulpif(env === "dev", sourcemaps.init()))
-      .pipe(sassGlob()) // лучше пеедавать только блоки, чтобы не перебить стили
+      .pipe(sassGlob())
       .pipe(concat("main.min.scss"))
       .pipe(sass().on("error", sass.logError))
       //.pipe(px2rem())
@@ -117,7 +117,7 @@ task("styles", () => {
         )
       )
       .pipe(gulpif(env === "prod", gcmq()))
-      .pipe(gulpif(env === "prod", cleanCSS()))
+      .pipe(gulpif(env === "prod", csso()))
       .pipe(gulpif(env === "dev", sourcemaps.write()))
       .pipe(dest(`${DIST_PATH}/css`))
       .pipe(reload({ stream: true }))
@@ -193,6 +193,7 @@ task("watch", () => {
   watch(`./${SRC_PATH}/scss/**/*.scss`, series("styles"));
   watch(`./${SRC_PATH}/*.html`, series("copy:html"));
   watch(`./${SRC_PATH}/scripts/*.js`, series("scripts:modules"));
+  watch(`./${SRC_PATH}/scripts/*.js`, series("scripts:vendors"));
 });
 
 //ТАСКИ

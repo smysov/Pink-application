@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приложение PINK</title>
-  <link rel="stylesheet" href="./css/main.min.css" />
-  <script
-    src="https://api-maps.yandex.ru/2.1/?apikey=9c2c294f-72d5-497d-9675-de2a122c443e&lang=ru_RU&"></script>
+  <link href="./css/main.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,7 +13,7 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a href="index.html" class="header__logo logo">
+          <a href="index.html" class="header__logo logo" title="Логотип сайта">
             <svg class="logo__icon logo__icon--mobile">
               <use xlink:href="img/icons/sprite.svg#logo-pink-white-mobile"></use>
             </svg>
@@ -29,7 +27,8 @@
           <nav class="main-navigation">
             <ul class="main-navigation__list site-list">
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--active" href="index.html">Главная</a>
+                <a class="site-list__link site-list__link--active"
+                  href="index.html">Главная</a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__link" href="photo.html">Фотографии</a>
@@ -38,12 +37,12 @@
                 <a class="site-list__link" href="form.html">Конкурс</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="https://htmlacademy.ru/study"
-                  target="_blank">HTML Academy</a>
+                <a class="site-list__link" href="https://htmlacademy.ru/study" target="_blank"
+                  rel="noopener">HTML Academy</a>
               </li>
             </ul>
           </nav>
-          <button class="hamburger-menu" type="button">
+          <button class="hamburger-menu" type="button" aria-label="Мобильное меню">
             <span class="hamburger-menu__icon hamburger-menu__icon--burger"></span>
           </button>
         </div>
@@ -60,12 +59,12 @@
             </div>
             <div class="hero__inner-application">
               <a class="hero__button button" href="https://play.google.com/store?hl=ru"
-                target="_blank">Скачать
+                target="_blank" rel="noopener">Скачать
                 приложение</a>
               <ul class="hero__list score-list">
                 <li class="score-list__item">
                   <a class="scrore-list__link" href="https://www.apple.com/ru/ios/app-store/"
-                    target="_blank">
+                    target="_blank" rel="noopener">
                     <svg class="score-list__image score-list__image--apple">
                       <use xlink:href="./img/icons/sprite.svg#logo-apple"></use>
                     </svg>
@@ -73,7 +72,7 @@
                 </li>
                 <li class="score-list__item">
                   <a class="scrore-list__link" href="https://play.google.com/store?hl=ru"
-                    target="_blank">
+                    target="_blank" rel="noopener">
                     <svg class="score-list__image score-list__image--android">
                       <use xlink:href="./img/icons/sprite.svg#logo-android"></use>
                     </svg>
@@ -81,7 +80,8 @@
                 </li>
                 <li class="score-list__item">
                   <a class="scrore-list__link"
-                    href="https://www.microsoft.com/store/apps/windows-phone" target="_blank">
+                    href="https://www.microsoft.com/store/apps/windows-phone" target="_blank"
+                    rel="noopener">
                     <svg class="score-list__image score-list__image--microsoft">
                       <use xlink:href="./img/icons/sprite.svg#logo-microsoft"></use>
                     </svg>
@@ -178,18 +178,21 @@
               <div class="rewievs__name">Николай Петров</div>
               <div class="rewievs__about">25 лет, водитель трамвая</div>
             </li>
-            <button class="rewievs__prev" type="button"></button>
-            <button class="rewievs__next" type="button"></button>
+            <button class="rewievs__prev" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="rewievs__next" type="button" aria-label="Следующий слайд"></button>
           </ul>
           <ul class="rewievs__toggles slider__toggles">
             <li class="slider__toggle">
-              <button class="slider__button slider__button--active" type="button"></button>
+              <button class="slider__button slider__button--active" type="button"
+                aria-label="Кнопки переключения слада"></button>
             </li>
             <li class="slider__toggle">
-              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button"
+                aria-label="Кнопки переключения слада"></button>
             </li>
             <li class="slider__toggle">
-              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button"
+                aria-label="Кнопки переключения слада"></button>
             </li>
           </ul>
         </div>
@@ -289,7 +292,7 @@
     <footer class="footer footer--index">
       <div class="container">
         <div class="footer__inner">
-          <a class="footer__logo logo logo--footer" href="index.html">
+          <a class="footer__logo logo logo--footer" href="index.html" title="Логотип сайта">
             <svg class="logo__icon logo__icon--footer">
               <use xlink:href="../../img/icons/sprite.svg#logo-pink-blue-mobile"></use>
             </svg>
@@ -299,14 +302,16 @@
           </a>
           <ul class="footer__socials socials">
             <li class="socials__item">
-              <a class="socials__link" href="https://twitter.com/explore" target="_blank">
+              <a class="socials__link" href="https://twitter.com/explore" target="_blank"
+                rel="noopener" title="Логотип сайта Twitter">
                 <svg class="socials__icon socials__icon--twitter">
                   <use xlink:href="../../img/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link" href="https://ru-ru.facebook.com/" target="_blank">
+              <a class="socials__link" href="https://ru-ru.facebook.com/" target="_blank"
+                rel="noopener" title="Логотип сайта Facebook">
                 <svg class="socials__icon socials__icon--facebook">
                   <use xlink:href="../../img/icons/sprite.svg#facebook"></use>
                 </svg>
@@ -314,7 +319,7 @@
             </li>
             <li class="socials__item">
               <a class="socials__link" href="https://www.youtube.com/?gl=RU&hl=ru"
-                target="_blank">
+                target="_blank" rel="noopener" title="Логотип сайта Youtube">
                 <svg class="socials__icon socials__icon--youtube">
                   <use xlink:href="../../img/icons/sprite.svg#youtube"></use>
                 </svg>
@@ -323,7 +328,8 @@
           </ul>
           <div class="footer__copyright copyright">
             <span class="copyright__text">Разработано</span>
-            <a class="copyright__link" href="https://htmlacademy.ru/study" target="_blank">
+            <a class="copyright__link" href="https://htmlacademy.ru/study" target="_blank"
+              rel="noopener" title="Логотип сайта HTML Academy">
               <svg class="copyright__logo">
                 <use xlink:href="../../img/icons/sprite.svg#logo-htmlacademy"></use>
               </svg>
@@ -334,6 +340,8 @@
     </footer>
   </div>
   <script src="./js/main.min.js"></script>
+  <script
+    src="https://api-maps.yandex.ru/2.1/?apikey=d01c2bf3-9fd7-4051-8ff4-c9334f34ef76&lang=ru_RU"></script>
   <script src="./js/map.js"></script>
 </body>
 

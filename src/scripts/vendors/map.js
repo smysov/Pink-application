@@ -1,7 +1,5 @@
-ymaps.ready(init);
-
-function init() {
-  map = new ymaps.Map("map", {
+ymaps.ready(function () {
+  let map = new ymaps.Map("map", {
     center: [53.1880376186109, 50.0894190217094],
     zoom: 18,
     controls: ["zoomControl"],
@@ -17,11 +15,11 @@ function init() {
     },
     {
       iconLayout: "default#image",
-      iconImageHref: "./img/decor/icon-map-marker.svg",
+      iconImageHref: "../img/decor/icon-map-marker.svg",
       iconImageSize: [35, 35],
-      iconImageOffset: [7, -15]
+      iconImageOffset: [7, -15],
     }
   );
 
   map.geoObjects.add(placemark);
-}
+});
