@@ -15,6 +15,9 @@ const uglify = require("gulp-uglify");
 const svgo = require("gulp-svgo");
 const svgSprite = require("gulp-svg-sprite");
 const gulpif = require("gulp-if");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const htmlmin = require("gulp-htmlmin");
 
 const env = process.env.NODE_ENV;
 
@@ -22,15 +25,22 @@ const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require("./gulp.config");
 
 sass.compiler = require("node-sass");
 
+//ОЧИСТКА ПАПКИ DIST
+
 task("clean", () => {
   return src(`${DIST_PATH}/**/*`, { read: false }).pipe(rm());
 });
 
+//КОПИРОВАНИЕ HTML
+
 task("copy:html", () => {
   return src(`${SRC_PATH}/*.html`)
+    .pipe(htmlmin(env === "prod", { collapseWhitespace: true }))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
+
+//КОПИРОВАНИЕ ШРИФТОВ
 
 task("fonts", () => {
   return src(`${SRC_PATH}/fonts/*`)
@@ -38,11 +48,15 @@ task("fonts", () => {
     .pipe(reload({ stream: true }));
 });
 
+//КОПИРОВАНИЕ КОНТЕНТНЫХ ИЗОБРАЖЕНИЙ
+
 task("copy:pictures", () => {
   return src(`${SRC_PATH}/images/content/*`)
     .pipe(dest(`${DIST_PATH}/img/content`))
     .pipe(reload({ stream: true }));
 });
+
+//КОПИРОВАНИЕ ДЕКОРАТИВНЫХ ИЗОБРАЖЕНИЙ
 
 task("copy:decor", () => {
   return src(`${SRC_PATH}/images/decor/*`)
@@ -50,6 +64,41 @@ task("copy:decor", () => {
     .pipe(reload({ stream: true }));
 });
 
+//Оптимизация изображений
+
+task("images:content", () => {
+  return src(`${SRC_PATH}/images/content/*.{png,jpg}`)
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.svgo(),
+      ])
+    )
+    .pipe(dest(`${DIST_PATH}/img/content/`));
+});
+
+task("images:decor", () => {
+  return src(`${SRC_PATH}/images/decor/*.{png,jpg,svg}`)
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.svgo(),
+      ])
+    )
+    .pipe(dest(`${DIST_PATH}/img/decor/`));
+});
+
+//КОНВЕРТАЦИЯ ИЗОБРАЖЕНИЙ
+
+task("webp:content", () => {
+  return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
+    .pipe(webp({ quality: 80 }))
+    .pipe(dest(`${DIST_PATH}/img/content/`));
+});
+
+//СТИЛИ
 
 task("styles", () => {
   return (
@@ -75,6 +124,8 @@ task("styles", () => {
   );
 });
 
+//ОСНОВНЫЕ СКРИПТЫ
+
 task("scripts:modules", () => {
   return src(`${SRC_PATH}/scripts/modules/*js`)
     .pipe(gulpif(env === "dev", sourcemaps.init()))
@@ -86,16 +137,21 @@ task("scripts:modules", () => {
     .pipe(reload({ stream: true }));
 });
 
+//СТОРОННИЕ СКРИПТЫ БИБЛИОТЕКИ
+
 task("scripts:vendors", () => {
-  return src(`${SRC_PATH}/scripts/vendors/*js`)
-    .pipe(gulpif(env === "dev", sourcemaps.init()))
-    // .pipe(concat("main.min.js", { newLine: ";" }))
-    .pipe(gulpif(env === "prod", babel({ presets: ["@babel/env"] })))
-    .pipe(gulpif(env === "prod", uglify()))
-    .pipe(gulpif(env === "dev", sourcemaps.write()))
-    .pipe(dest(`${DIST_PATH}/js`))
-    .pipe(reload({ stream: true }));
+  return (
+    src(`${SRC_PATH}/scripts/vendors/*js`)
+      .pipe(gulpif(env === "dev", sourcemaps.init()))
+      .pipe(gulpif(env === "prod", babel({ presets: ["@babel/env"] })))
+      .pipe(gulpif(env === "prod", uglify()))
+      .pipe(gulpif(env === "dev", sourcemaps.write()))
+      .pipe(dest(`${DIST_PATH}/js`))
+      .pipe(reload({ stream: true }))
+  );
 });
+
+//СПРАЙТ
 
 task("icons", () => {
   return src(`${SRC_PATH}/images/icons/*.svg`)
@@ -103,37 +159,43 @@ task("icons", () => {
       svgo({
         plugins: [
           {
-            removeAttrs: { attrs: "(data.*)" }
-          }
-        ]
+            removeAttrs: { attrs: "(data.*)" },
+          },
+        ],
       })
     )
     .pipe(
       svgSprite({
         mode: {
           symbol: {
-            sprite: "../sprite.svg"
-          }
-        }
+            sprite: "../sprite.svg",
+          },
+        },
       })
     )
     .pipe(dest(`${DIST_PATH}/img/icons`));
 });
+
+//СЕРВЕР
 
 task("server", () => {
   browserSync.init({
     server: {
       baseDir: `${DIST_PATH}`,
     },
-    open: false,
+    open: true,
   });
 });
+
+//СЛЕЖКА ФАЙЛОВ
 
 task("watch", () => {
   watch(`./${SRC_PATH}/scss/**/*.scss`, series("styles"));
   watch(`./${SRC_PATH}/*.html`, series("copy:html"));
   watch(`./${SRC_PATH}/scripts/*.js`, series("scripts:modules"));
 });
+
+//ТАСКИ
 
 task(
   "default",
@@ -143,6 +205,9 @@ task(
       "copy:html",
       "copy:pictures",
       "copy:decor",
+      "images:content",
+      "images:decor",
+      "webp:content",
       "icons",
       "styles",
       "scripts:modules",
@@ -161,6 +226,9 @@ task(
       "copy:html",
       "copy:pictures",
       "copy:decor",
+      "images:content",
+      "images:decor",
+      "webp:content",
       "icons",
       "styles",
       "scripts:modules",
