@@ -1,59 +1,138 @@
-Стили для слайдера
-
 .slider {
   position: relative;
-}
 
-//Стили списка и элементов списка точек переключения
-
-  .slider__toggles {
+  &__list {
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 44px;
-    padding-left: 15px;
+    overflow: hidden;
+    padding-top: 41px;
+    height: 100%;
 
     @media #{$desktop} {
-      display: none;
+      padding-top: 185px;
     }
   }
 
-  .slider__toggle {
-    margin-right: 17px;
-  }
-
-//Стили кнопок перекличения(дотс)
-
-  .slider__button {
-    width: 7px;
-    height: 7px;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, .3);
-    border-radius: 50%;
-    transition: .3s ease-in-out;
-    border: 2px solid transparent;
+  &__item {
+    display: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
 
     &--active {
-      width: 9px;
-      height: 9px;
-      padding: 4px;
-      border: 2px solid #000;
-      background-color: #fff;
-
-      @media #{$tablet-only} {
-        padding: 3px;
-        border: 3px solid #000;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // width: 100%;
+      flex-shrink: 0;
+      flex-basis: 100%;
+      align-self: stretch;
     }
+  }
+}
+
+//Кнопки вперёд, назад
+//Стили для кнопок переключения слайдов
+
+
+.slider__prev {
+  display: none;
+  transition: .3s linear;
+
+  @media #{$desktop} {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 22px;
+    height: 41px;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: url(../../img/decor/icon-review-arrow-left.svg) no-repeat;
 
     &:hover {
-      background-color: rgba(0, 0, 0, .6);
+      background: url(../../img/decor/icon-review-arrow-left-hvr.svg) no-repeat;
     }
 
     &:active {
-      background-color: rgba(0, 0, 0, .2);
+      background: url(../../img/decor/icon-review-arrow-left-down.svg) no-repeat;
     }
   }
+}
+
+.slider__next {
+  display: none;
+  transition: .3s linear;
+
+  @media #{$desktop} {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 22px;
+    height: 41px;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: url(../../img/decor/icon-review-arrow-right.svg) no-repeat;
+
+    &:hover {
+      background: url(../../img/decor/icon-review-arrow-right-hvr.svg) no-repeat;
+    }
+
+    &:active {
+      background: url(../../img/decor/icon-review-arrow-right-down.svg) no-repeat;
+    }
+  }
+}
+//Стили списка и элементов списка точек переключения
+
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 44px;
+  padding-left: 15px;
+}
+
+.slider__toggle {
+  margin-right: 17px;
+}
+
+//Стили кнопок перекличения(дотс)
+
+.slider__button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  transition: .3s linear;
+  border: 2px solid transparent;
+
+  &--active {
+    width: 9px;
+    height: 9px;
+    padding: 4px;
+    border: 2px solid #000;
+    background-color: #fff;
+
+    @media #{$tablet-only} {
+      padding: 3px;
+      border: 3px solid #000;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, .2);
+  }
+}

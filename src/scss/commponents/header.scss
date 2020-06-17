@@ -20,6 +20,12 @@
 
   &--background {
     background-color: $blue;
+
+    @media #{$tablet-only} {
+      background-color: $blue;
+    }
+
+    
   }
 
   &__inner {
@@ -39,7 +45,7 @@
     }
   }
 
-  // &__logo {
-  //   animation: scale .6s linear;
-  // }
+  &__logo {
+    animation: scale .6s linear;
+  }
 }

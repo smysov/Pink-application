@@ -6,24 +6,6 @@
     overflow: hidden;
   }
 
-  &__list {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    padding-top: 41px;
-
-    @media #{$desktop} {
-      padding-top: 185px;
-    }
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    flex-shrink: 0;
-  }
 
   &__text {
     @include font("Open Sans", 14px, 400, normal);
@@ -81,62 +63,6 @@
     @media #{$desktop} {
       font-size: 18px;
       margin-bottom: 50px;
-    }
-  }
-}
-
-//Стили для кнопок переключения слайдов
-
-
-.rewievs__prev {
-  display: none;
-  transition: .3s linear;
-
-  @media #{$desktop} {
-    position: absolute;
-    top: 50%;
-    display: block;
-    width: 22px;
-    height: 41px;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-    border: none;
-    background: url(../../img/decor/icon-review-arrow-left.svg) no-repeat;
-
-    &:hover {
-      background: url(../../img/decor/icon-review-arrow-left-hvr.svg) no-repeat;
-    }
-
-    &:active {
-      background: url(../../img/decor/icon-review-arrow-left-down.svg) no-repeat;
-    }
-  }
-}
-
-.rewievs__next {
-  display: none;
-  transition: .3s linear;
-
-  @media #{$desktop} {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    display: block;
-    width: 22px;
-    height: 41px;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-    border: none;
-    background: url(../../img/decor/icon-review-arrow-right.svg) no-repeat;
-
-    &:hover {
-      background: url(../../img/decor/icon-review-arrow-right-hvr.svg) no-repeat;
-    }
-
-    &:active {
-      background: url(../../img/decor/icon-review-arrow-right-down.svg) no-repeat;
     }
   }
 }

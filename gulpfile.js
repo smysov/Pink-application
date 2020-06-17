@@ -192,8 +192,8 @@ task("server", () => {
 task("watch", () => {
   watch(`./${SRC_PATH}/scss/**/*.scss`, series("styles"));
   watch(`./${SRC_PATH}/*.html`, series("copy:html"));
-  watch(`./${SRC_PATH}/scripts/*.js`, series("scripts:modules"));
-  watch(`./${SRC_PATH}/scripts/*.js`, series("scripts:vendors"));
+  watch(`./${SRC_PATH}/scripts/modules/*.js`, series("scripts:modules"));
+  watch(`./${SRC_PATH}/scripts/vendors/*.js`, series("scripts:vendors"));
 });
 
 //ТАСКИ
