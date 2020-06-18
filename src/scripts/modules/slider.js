@@ -55,6 +55,7 @@ dots.forEach((item, indexDot) => {
   item.addEventListener('click', () => {
     index = indexDot;
     readyActiveSlide(index);
+    clearInterval(automaticDisplaySlides);
   })
 });
 
@@ -64,4 +65,5 @@ buttonPrev.addEventListener("click", prevSlide);
 
 //Функция автоматического показа слайдов
 
-const automaticDisplaySlides = setInterval(nextSlide, 5000)
+const automaticDisplaySlides = setInterval(nextSlide, 5000);
+
