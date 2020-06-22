@@ -1,17 +1,17 @@
 //Стили для шапки и обёртки
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   @include font("Open Sans", 18px, bold, normal);
-  background-color: $header;
+  // background-color: $header;
   min-height: 65px;
 
   @media #{$tablet-only} {
     min-height: 104px;
-    background-color: rgba(0, 0, 0, 0.2);
+    // background-color: rgba(0, 0, 0, 0.2);
   }
 
   @media #{$desktop} {

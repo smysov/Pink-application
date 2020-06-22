@@ -1,25 +1,25 @@
 (function () {
   //ОБъявление переменных
   const buttonPrev = document.querySelector(".slider__prev");
-  buttonNext = document.querySelector(".slider__next");
-  slides = document.querySelectorAll(".slider__item");
-  dots = document.querySelectorAll(".slider__button");
+  const buttonNext = document.querySelector(".slider__next");
+  const slides = document.querySelectorAll(".slider__item");
+  const dots = document.querySelectorAll(".slider__button");
 
   //Текущий индекс
   let index = 0;
 
   //Функция передаёт активный класс псевдомассиву
   const activeSlide = (n) => {
-    for (slide of slides) {
-      slide.classList.remove("slider__item--active");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("slider__item--active");
     }
     slides[n].classList.add("slider__item--active");
   };
 
   //Функция передаёт активный класс псевдомассиву
   const activeDots = (n) => {
-    for (dot of dots) {
-      dot.classList.remove("slider__button--active");
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("slider__button--active");
     }
     dots[n].classList.add("slider__button--active");
   };

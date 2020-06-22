@@ -142,92 +142,90 @@
         flex-direction: column;
         padding: 0px 40px;
         margin-bottom: 33px;
+      }
 
-        @media #{$desktop} {
-          margin-bottom: 23px;
-        }
+      @media #{$desktop} {
+        margin-bottom: 23px;
+      }
 
-        &:first-child {
+      &:first-child {
 
-          &::before {
+        &::before {
+
+          @media #{$tablet-only} {
             content: "";
             position: absolute;
             top: 2px;
-            right: 2px;
             width: 58px;
             height: 58px;
             background-color: #e5e5e5;
-
-            @media #{$tablet-only} {
-              right: 42px;
-            }
-
-            @media #{$desktop} {
-              right: 2px;
-            }
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 19px;
-            right: 20px;
-            width: 20px;
-            height: 19px;
-            background-image: url(../../img/decor/icon-phone.svg);
-
-            @media #{$tablet-only} {
-              right: 58px;
-            }
-
-            @media #{$desktop} {
-              right: 20px;
-            }
-          }
-        }
-
-        &:last-child {
-
-          &::before {
-            content: "";
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            width: 58px;
-            height: 58px;
-            background-color: #e5e5e5;
-
-            @media #{$tablet-only} {
-              right: 42px;
-            }
-
-            @media #{$desktop} {
-              right: 2px;
-            }
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 23px;
-            right: 22px;
-            width: 18px;
-            height: 13px;
-            background-image: url(../../img/decor/icon-mail.svg);
-
-            @media #{$tablet-only} {
-              right: 58px;
-            }
-
-            @media #{$desktop} {
-              right: 20px;
-            }
+            right: 42px;
           }
 
           @media #{$desktop} {
-            padding: 0;
-            margin-left: 69px;
+            right: 2px;
           }
+        }
+
+        &::after {
+
+          @media #{$tablet-only} {
+            content: "";
+            position: absolute;
+            top: 22px;
+            width: 20px;
+            height: 19px;
+            background-image: url(../../img/decor/icon-phone.svg);
+            right: 59px;
+          }
+
+          @media #{$desktop} {
+            right: 20px;
+          }
+        }
+      }
+
+      &:last-child {
+
+        &::before {
+
+          @media #{$tablet-only} {
+            content: "";
+            position: absolute;
+            top: 2px;
+            width: 58px;
+            height: 58px;
+            background-color: #e5e5e5;
+            right: 42px;
+            right: 42px;
+          }
+
+          @media #{$desktop} {
+            right: 2px;
+          }
+        }
+
+        &::after {
+
+
+          @media #{$tablet-only} {
+            content: "";
+            position: absolute;
+            top: 25px;
+            width: 18px;
+            height: 13px;
+            background-image: url(../../img/decor/icon-mail.svg);
+            right: 60px;
+          }
+
+          @media #{$desktop} {
+            right: 20px;
+          }
+        }
+
+        @media #{$desktop} {
+          padding: 0;
+          margin-left: 69px;
         }
       }
 
@@ -742,7 +740,7 @@
   }
 }
 
-.validation-error input:required:invalid, 
+.validation-error input:required:invalid,
 .validation-error textarea:required:invalid {
   border-color: red;
 }

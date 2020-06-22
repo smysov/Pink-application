@@ -64,6 +64,14 @@ task("copy:decor", () => {
     .pipe(reload({ stream: true }));
 });
 
+//КОПИРОВАНИЕ ФАВИКОНОК
+
+task("copy:favicons", () => {
+  return src(`${SRC_PATH}/images/favicons/*.{svg,png,json,jpg,jpeg}`)
+    .pipe(dest(`${DIST_PATH}/img/favicons/`))
+    .pipe(reload({ stream: true }));
+});
+
 //Оптимизация изображений
 
 task("images:content", () => {
@@ -208,6 +216,7 @@ task(
       "copy:decor",
       "images:content",
       "images:decor",
+      "copy:favicons",
       "webp:content",
       "icons",
       "styles",
@@ -229,6 +238,7 @@ task(
       "copy:decor",
       "images:content",
       "images:decor",
+      "copy:favicons",
       "webp:content",
       "icons",
       "styles",

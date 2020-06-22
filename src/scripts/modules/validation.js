@@ -1,11 +1,11 @@
 (function () {
   const form = document.querySelector(".form");
-  submitButton = document.querySelector(".form__button");
-  popupError = document.querySelector(".popup--error");
-  popupSuccess = document.querySelector(".popup--success");
-  popupRefusal = document.querySelector(".popup--refusal");
-  popupClose = document.querySelectorAll(".popup__button");
-  popup = document.querySelectorAll(".popup");
+  const submitButton = document.querySelector("#sendButton");
+  const popupError = document.querySelector(".popup--error");
+  const popupSuccess = document.querySelector(".popup--success");
+  const popupRefusal = document.querySelector(".popup--refusal");
+  const popupClose = document.querySelectorAll(".popup__button");
+  const popup = document.querySelectorAll(".popup");
 
   submitButton.addEventListener("click", function (event) {
     event.preventDefault();
