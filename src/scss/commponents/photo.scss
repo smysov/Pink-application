@@ -116,6 +116,7 @@
   top: 0;
   right: 20px;
   background-color: $pink;
+  background-image: linear-gradient(to right, #db3a66, #e01d52, #e20440);
   padding: 10px 20px;
   text-transform: uppercase;
   color: #fff;
@@ -214,8 +215,8 @@
   outline: none;
   border: none;
   cursor: pointer;
-  width: 14px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   background-image: url(../../img/decor/icon-heart.svg);
   background-repeat: no-repeat;
   margin-right: 17px;

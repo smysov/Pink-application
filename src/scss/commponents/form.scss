@@ -97,6 +97,7 @@
   }
 
   &__line {
+    position: relative;
 
     &--centred {
       text-align: center;
@@ -151,11 +152,19 @@
           &::before {
             content: "";
             position: absolute;
-            top: 0;
-            right: 0px;
-            width: 65px;
-            height: 63px;
+            top: 2px;
+            right: 2px;
+            width: 58px;
+            height: 58px;
             background-color: #e5e5e5;
+
+            @media #{$tablet-only} {
+              right: 42px;
+            }
+
+            @media #{$desktop} {
+              right: 2px;
+            }
           }
 
           &::after {
@@ -166,6 +175,14 @@
             width: 20px;
             height: 19px;
             background-image: url(../../img/decor/icon-phone.svg);
+
+            @media #{$tablet-only} {
+              right: 58px;
+            }
+
+            @media #{$desktop} {
+              right: 20px;
+            }
           }
         }
 
@@ -174,11 +191,19 @@
           &::before {
             content: "";
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 65px;
-            height: 63px;
+            top: 2px;
+            right: 2px;
+            width: 58px;
+            height: 58px;
             background-color: #e5e5e5;
+
+            @media #{$tablet-only} {
+              right: 42px;
+            }
+
+            @media #{$desktop} {
+              right: 2px;
+            }
           }
 
           &::after {
@@ -189,6 +214,14 @@
             width: 18px;
             height: 13px;
             background-image: url(../../img/decor/icon-mail.svg);
+
+            @media #{$tablet-only} {
+              right: 58px;
+            }
+
+            @media #{$desktop} {
+              right: 20px;
+            }
           }
 
           @media #{$desktop} {
@@ -329,7 +362,7 @@
 
       @media #{$tablet-only} {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 30px;
         text-align: center;
       }
 
@@ -579,7 +612,7 @@
     line-height: 30px;
     resize: none;
     line-height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     outline: none;
     transition: .4s linear;
     margin-bottom: 47px;
@@ -655,4 +688,66 @@
   &__necessarily {
     color: $pink;
   }
+}
+
+//Валидация
+
+.form__validation-error {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  @include font("Open Sans", 12px, 700, normal);
+  text-transform: uppercase;
+  color: $pink;
+  display: none;
+
+  @media #{$tablet-only} {
+    font-size: 14px;
+    bottom: -20px;
+  }
+
+  &--email {
+    bottom: 20px;
+
+    @media #{$tablet-only} {
+      bottom: 0;
+      right: 50px;
+    }
+
+    @media #{$desktop} {
+      right: 5px;
+    }
+  }
+}
+
+.form__input--surname,
+.form__input--name,
+.form__input--phone,
+.form__comment,
+.form__input--email {
+
+  &:valid,
+  &:focus:valid {
+    border-color: green;
+  }
+
+  &:required:invalid:not(:placeholder-show),
+  &:required:focus:invalid:not(:placeholder-show) {
+    border-color: red;
+  }
+
+
+  &:required:invalid:focus+.form__validation-error {
+    display: block;
+  }
+}
+
+.validation-error input:required:invalid, 
+.validation-error textarea:required:invalid {
+  border-color: red;
+}
+
+
+.validation-error input:required:invalid+.form__validation-error {
+  display: block;
 }

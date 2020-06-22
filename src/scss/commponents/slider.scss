@@ -107,14 +107,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 17px;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 //Стили кнопок перекличения(дотс)
 
 .slider__button {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   padding: 0;
   border: 0;
   outline: 0;
@@ -130,8 +134,8 @@
   }
 
   &--active {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     padding: 0;
     border: 2px solid #000;
     background-color: #fff;

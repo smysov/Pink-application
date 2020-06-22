@@ -66,11 +66,11 @@
 
     @media #{$tablet-only} {
       min-height: 486px;
-      padding-top: 98px;
+      padding-top: 100px;
       padding-left: 310px;
       margin-bottom: 95px;
       background: url(../../img/decor/iphone-screen-3-tablet@1x.png) 21px bottom/268px 481px no-repeat,
-        url(../../img/decor/bg-triangle-white.svg) 50% 0/175% 16% no-repeat;
+        url(../../img/decor/bg-triangle-white.svg) 50% 0/175% 25% no-repeat;
       background-color: #f2f2f2;
 
       @media (min-resolution: 144dpi),

@@ -1,0 +1,94 @@
+.popup {
+  display: none;
+
+  &--show {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    max-width: 320px;
+
+    @media #{$tablet-only} {
+      max-width: 460px;
+    }
+
+    @media #{$desktop} {
+      max-width: 780px;
+    }
+  }
+
+  &__title {
+    @include font("Opens Sans", 18px, 700, normal);
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 30px;
+    padding: 42px 20px 0;
+
+    @media #{$tablet-only} {
+      font-size: 30px;
+      line-height: 40px;
+      padding: 25px 125px 0;
+    }
+  }
+
+  &__text {
+    @include font("Opens Sans", 14px, 400, normal);
+    line-height: 24px;
+    text-align: center;
+    color: #283645;
+    margin-bottom: 35px;
+    padding: 0 20px;
+
+    @media #{$tablet-only} {
+      font-size: 16px;
+      padding: 0 93px;
+    }
+
+    @media #{$desktop} {
+      font-size: 18px;
+      padding: 0 215px;
+    }
+  }
+
+  &__wrapper-button {
+    min-height: 165px;
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+    @media #{$tablet-only} {
+      min-height: 100px;
+    }
+  }
+
+  &__button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $greenButton;
+    padding: 20px 65px;
+    min-width: 280px;
+  }
+}
